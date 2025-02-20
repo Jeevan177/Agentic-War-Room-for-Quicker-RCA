@@ -1,0 +1,1807 @@
+2024-12-16T21:00:00.000Z user-db INFO [pid=101] Initializing HikariPool-1 environment=production region=us-west-2
+2024-12-16T21:00:02.000Z user-service INFO [thread=main] Starting UserService version=1.3.5
+2024-12-16T21:00:04.000Z auth-service DEBUG [http-nio-8080-exec-1] "Initializing auth context"
+2024-12-16T21:00:06.000Z payment-service INFO [PaymentWorker-1] "Payment queue is empty"
+2024-12-16T21:00:08.000Z user-db DEBUG [pid=102] "Idle connections=60, Active=40" pool=HikariPool-1
+2024-12-16T21:00:10.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/profile" time=85ms status=200
+2024-12-16T21:00:12.000Z auth-service DEBUG [http-nio-8080-exec-3] Validating session token userId=402
+2024-12-16T21:00:14.000Z payment-service INFO [PaymentWorker-2] "No pending payments"
+2024-12-16T21:00:16.000Z user-db INFO [pid=103] "SELECT version()" 
+2024-12-16T21:00:18.000Z user-service INFO [thread=http-nio-8080-exec-4] "POST /api/user/updateProfile" status=200
+2024-12-16T21:00:20.000Z auth-service INFO [http-nio-8080-exec-5] "Login successful" userId=847
+2024-12-16T21:00:22.000Z payment-service DEBUG [thread=PaymentWorker-1] Checking payment gateway=Stripe
+2024-12-16T21:00:24.000Z user-db DEBUG [pid=104] transactionStarted txId=a1b2 user=user@db
+2024-12-16T21:00:26.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/cart" items=0
+2024-12-16T21:00:28.000Z auth-service DEBUG [http-nio-8080-exec-7] "Token validation OK"
+2024-12-16T21:00:30.000Z payment-service INFO Payment batch process started batchId=xyz environment=production
+2024-12-16T21:00:32.000Z user-db INFO [pid=104] commit txId=a1b2 user=user@db
+2024-12-16T21:00:34.000Z user-service DEBUG "Rendering user dashboard" userId=402
+2024-12-16T21:00:36.000Z auth-service INFO [http-nio-8080-exec-2] "Session extended" userId=402
+2024-12-16T21:00:38.000Z payment-service DEBUG [PaymentWorker-2] "Periodic payment check"
+2024-12-16T21:00:40.000Z user-db INFO [pid=105] "SELECT current_database()" 
+2024-12-16T21:00:42.000Z user-service INFO [thread=http-nio-8080-exec-1] Completed request /api/user/notifications in 54ms
+2024-12-16T21:00:44.000Z auth-service DEBUG { "user":"999", "action":"authenticate", "msg":"Success" }
+2024-12-16T21:00:46.000Z payment-service INFO "Payment authorized orderId=557841 userId=999"
+2024-12-16T21:01:00.000Z user-db INFO [pid=106] "Vacuum analyze started" 
+2024-12-16T21:01:00.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/orders" time=99ms
+2024-12-16T21:01:02.000Z auth-service DEBUG "Refreshing token for userId=999"
+2024-12-16T21:01:04.000Z payment-service INFO [PaymentWorker-1] "Processed payment for orderId=12345"
+2024-12-16T21:01:06.000Z user-db DEBUG [pid=107] "Active connections=40, Idle=60" HikariPool-1
+2024-12-16T21:01:08.000Z user-service INFO [thread=http-nio-8080-exec-3] "POST /api/user/order" itemCount=2 status=201
+2024-12-16T21:01:10.000Z auth-service WARN [http-nio-8080-exec-4] "Slow authentication check" time=780ms
+2024-12-16T21:01:12.000Z payment-service DEBUG Checking subscription renewals
+2024-12-16T21:01:14.000Z user-db INFO [pid=107] statement="SELECT 1"
+2024-12-16T21:01:16.000Z user-service INFO [thread=http-nio-8080-exec-7] Completed request /api/user/profile in 148ms
+2024-12-16T21:01:18.000Z auth-service INFO [http-nio-8080-exec-1] "Login success" userId=402
+2024-12-16T21:01:20.000Z payment-service INFO Payment authorized orderId=557842 gateway=PayPal
+2024-12-16T21:01:22.000Z user-db DEBUG [pid=108] transactionStarted txId=c3d4 user=user@db
+2024-12-16T21:01:24.000Z user-service DEBUG "Fetching user details" userId=847
+2024-12-16T21:01:26.000Z auth-service INFO [http-nio-8080-exec-2] "Token check complete" 
+2024-12-16T21:01:28.000Z payment-service INFO [PaymentWorker-2] "Refund processed" orderId=557800
+2024-12-16T21:01:30.000Z user-db INFO [pid=108] commit txId=c3d4 user=user@db
+2024-12-16T21:01:32.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/dashboard" time=110ms
+2024-12-16T21:01:34.000Z auth-service DEBUG [http-nio-8080-exec-6] "Session validated userId=847"
+2024-12-16T21:01:36.000Z payment-service INFO [PaymentWorker-1] "No failed payments in queue"
+2024-12-16T21:01:38.000Z user-db DEBUG [pid=109] statement="ANALYZE"
+2024-12-16T21:01:40.000Z user-service INFO [thread=http-nio-8080-exec-2] "POST /api/user/order" itemCount=1
+2024-12-16T21:01:42.000Z auth-service WARN [http-nio-8080-exec-3] "Auth token near expiry" userId=402
+2024-12-16T21:01:44.000Z payment-service DEBUG [PaymentWorker-2] "Checking gateway=Stripe"
+2024-12-16T21:01:46.000Z user-db INFO [pid=109] "Periodic stats: active=39 idle=61"
+2024-12-16T21:02:00.000Z user-service INFO [thread=http-nio-8080-exec-1] "GET /api/user/activity" status=200
+2024-12-16T21:02:00.000Z auth-service DEBUG { "userId":847, "action":"validateSession", "success":true }
+2024-12-16T21:02:02.000Z payment-service INFO [PaymentWorker-1] "Processing queued payment" count=2
+2024-12-16T21:02:04.000Z user-db DEBUG [pid=110] transactionStarted txId=e5f6 user=user@db
+2024-12-16T21:02:06.000Z user-service INFO [thread=http-nio-8080-exec-4] /api/user/logout userId=847
+2024-12-16T21:02:08.000Z auth-service INFO [http-nio-8080-exec-5] "Login attempt userId=111" result=SUCCESS
+2024-12-16T21:02:10.000Z payment-service DEBUG "Payment gateway health check gateway=PayPal"
+2024-12-16T21:02:12.000Z user-db INFO [pid=110] commit txId=e5f6 user=user@db
+2024-12-16T21:02:14.000Z user-service DEBUG "Loading user notifications" userId=111
+2024-12-16T21:02:16.000Z auth-service WARN [http-nio-8080-exec-6] "Slow DB response" time=654ms
+2024-12-16T21:02:18.000Z payment-service INFO [PaymentWorker-2] "Captured payment orderId=557843"
+2024-12-16T21:02:20.000Z user-db DEBUG [pid=111] statement="SELECT 1"
+2024-12-16T21:02:22.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/preferences" time=60ms
+2024-12-16T21:02:24.000Z auth-service DEBUG "Token verify for user=999" 
+2024-12-16T21:02:26.000Z payment-service INFO Payment authorized orderId=557844 gateway=Stripe
+2024-12-16T21:02:28.000Z user-db INFO [pid=111] "Cleanup temporary tables"
+2024-12-16T21:02:30.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "Updating user lastSeen=21:02:30" userId=999
+2024-12-16T21:02:32.000Z auth-service INFO [http-nio-8080-exec-2] "Login successful" userId=999
+2024-12-16T21:02:34.000Z payment-service DEBUG [PaymentWorker-1] "Checking refunds" 
+2024-12-16T21:02:36.000Z user-db DEBUG [pid=112] transactionStarted txId=g7h8 user=user@db
+2024-12-16T21:02:38.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/orders" status=200
+2024-12-16T21:02:40.000Z auth-service DEBUG [http-nio-8080-exec-4] "Authorization check complete"
+2024-12-16T21:02:42.000Z payment-service INFO Payment refunded orderId=557811 reason="Customer request"
+2024-12-16T21:02:44.000Z user-db INFO [pid=112] commit txId=g7h8 user=user@db
+2024-12-16T21:02:46.000Z user-service INFO [thread=http-nio-8080-exec-5] "POST /api/user/updateSettings" time=233ms
+2024-12-16T21:03:00.000Z auth-service DEBUG [http-nio-8080-exec-6] "Session renewal userId=111"
+2024-12-16T21:03:00.000Z payment-service INFO [PaymentWorker-2] "Processing scheduled payment" 
+2024-12-16T21:03:02.000Z user-db DEBUG [pid=113] "Idle=58, Active=42" pool=HikariPool-1
+2024-12-16T21:03:04.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/feed" time=159ms
+2024-12-16T21:03:06.000Z auth-service INFO [http-nio-8080-exec-3] "Auth token extended" userId=402
+2024-12-16T21:03:08.000Z payment-service DEBUG [PaymentWorker-1] "No pending payments found"
+2024-12-16T21:03:10.000Z user-db INFO [pid=113] statement="ANALYZE"
+2024-12-16T21:03:12.000Z user-service DEBUG "Building user recommendations" userId=402
+2024-12-16T21:03:14.000Z auth-service WARN [http-nio-8080-exec-4] "Slow DB read" time=712ms
+2024-12-16T21:03:16.000Z payment-service INFO Payment authorized orderId=557845 gateway=Stripe
+2024-12-16T21:03:18.000Z user-db DEBUG [pid=114] transactionStarted txId=i9j0 user=user@db
+2024-12-16T21:03:20.000Z user-service INFO [thread=http-nio-8080-exec-5] /api/user/notifications userId=402
+2024-12-16T21:03:22.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token validation OK userId=111"
+2024-12-16T21:03:24.000Z payment-service INFO [PaymentWorker-2] "Refund initiated" orderId=557812
+2024-12-16T21:03:26.000Z user-db INFO [pid=114] commit txId=i9j0 user=user@db
+2024-12-16T21:03:28.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "User data load" userId=111
+2024-12-16T21:03:30.000Z auth-service INFO [http-nio-8080-exec-1] "Login success" userId=847
+2024-12-16T21:03:32.000Z payment-service DEBUG [PaymentWorker-1] "Payment queued" orderId=557846
+2024-12-16T21:03:34.000Z user-db DEBUG [pid=115] statement="SELECT count(*) FROM orders"
+2024-12-16T21:03:36.000Z user-service INFO [thread=http-nio-8080-exec-3] "POST /api/user/order" itemCount=1
+2024-12-16T21:03:38.000Z auth-service DEBUG "Session check user=402" 
+2024-12-16T21:03:40.000Z payment-service INFO "Payment captured orderId=557846"
+2024-12-16T21:03:42.000Z user-db INFO [pid=115] "Periodic stats: active=41 idle=59"
+2024-12-16T21:03:44.000Z user-service INFO [thread=http-nio-8080-exec-4] /api/user/dashboard userId=999 status=200
+2024-12-16T21:03:46.000Z auth-service WARN [http-nio-8080-exec-5] "Auth DB query slow" time=890ms
+2024-12-16T21:04:00.000Z payment-service DEBUG [PaymentWorker-2] "Subscription renewal scan"
+2024-12-16T21:04:00.000Z user-db DEBUG [pid=116] "Transaction start" txId=k1l2
+2024-12-16T21:04:02.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/cart" status=200
+2024-12-16T21:04:04.000Z auth-service INFO [http-nio-8080-exec-7] "Authentication success" userId=111
+2024-12-16T21:04:06.000Z payment-service WARN [PaymentWorker-1] "Payment gateway slightly delayed" latency=300ms
+2024-12-16T21:04:08.000Z user-db INFO [pid=116] commit txId=k1l2 user=user@db
+2024-12-16T21:04:10.000Z user-service DEBUG "Rendering user profile" userId=847
+2024-12-16T21:04:12.000Z auth-service DEBUG [http-nio-8080-exec-1] "Token updated"
+2024-12-16T21:04:14.000Z payment-service INFO [PaymentWorker-2] "Processed refund" orderId=557813
+2024-12-16T21:04:16.000Z user-db DEBUG [pid=117] statement="SELECT 1"
+2024-12-16T21:04:18.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/details" time=102ms
+2024-12-16T21:04:20.000Z auth-service INFO [http-nio-8080-exec-3] "Login success" userId=999
+2024-12-16T21:04:22.000Z payment-service DEBUG [PaymentWorker-1] "Auto-capture started"
+2024-12-16T21:04:24.000Z user-db INFO [pid=117] "Idle=58 Active=42" HikariPool-1
+2024-12-16T21:04:26.000Z user-service INFO [thread=http-nio-8080-exec-4] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:04:28.000Z auth-service DEBUG [http-nio-8080-exec-5] "Session validated" user=847
+2024-12-16T21:04:30.000Z payment-service INFO "Payment authorized orderId=557848 gateway=Stripe"
+2024-12-16T21:04:32.000Z user-db DEBUG [pid=118] transactionStarted txId=m3n4 user=user@db
+2024-12-16T21:04:34.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "User stats loaded" userId=402
+2024-12-16T21:04:36.000Z auth-service WARN [http-nio-8080-exec-7] "Extended authentication time=660ms"
+2024-12-16T21:04:38.000Z payment-service DEBUG [PaymentWorker-2] "Queue size=1"
+2024-12-16T21:04:40.000Z user-db INFO [pid=118] commit txId=m3n4
+2024-12-16T21:04:42.000Z user-service INFO [thread=http-nio-8080-exec-1] "GET /api/user/orders" time=75ms
+2024-12-16T21:04:44.000Z auth-service DEBUG { "user":"999", "action":"tokenRefresh" }
+2024-12-16T21:04:46.000Z payment-service INFO [PaymentWorker-1] "Invoice generation complete"
+2024-12-16T21:05:00.000Z user-db DEBUG [pid=119] "Periodic vacuum triggered"
+2024-12-16T21:05:00.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/activity" status=200
+2024-12-16T21:05:02.000Z auth-service INFO [http-nio-8080-exec-3] "Login attempt" userId=402 result=SUCCESS
+2024-12-16T21:05:04.000Z payment-service DEBUG "Subscription payment in progress" userId=999
+2024-12-16T21:05:06.000Z user-db INFO [pid=119] statement="SELECT current_setting('max_connections')"
+2024-12-16T21:05:08.000Z user-service DEBUG "Updating notifications" userId=847
+2024-12-16T21:05:10.000Z auth-service INFO [http-nio-8080-exec-4] "Token renewal" userId=999
+2024-12-16T21:05:12.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=557849"
+2024-12-16T21:05:14.000Z user-db DEBUG [pid=120] transactionStarted txId=o5p6
+2024-12-16T21:05:16.000Z user-service INFO [thread=http-nio-8080-exec-5] "POST /api/user/order" itemCount=2
+2024-12-16T21:05:18.000Z auth-service DEBUG [http-nio-8080-exec-6] "User permissions check" userId=111
+2024-12-16T21:05:20.000Z payment-service WARN [PaymentWorker-1] "Possible gateway delay" gateway=PayPal
+2024-12-16T21:05:22.000Z user-db INFO [pid=120] commit txId=o5p6
+2024-12-16T21:05:24.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/summary" time=215ms
+2024-12-16T21:05:26.000Z auth-service DEBUG [http-nio-8080-exec-1] "Refreshing token" userId=402
+2024-12-16T21:05:28.000Z payment-service INFO [PaymentWorker-2] "Refund processed" orderId=557814
+2024-12-16T21:05:30.000Z user-db DEBUG [pid=121] "Idle=57 Active=43"
+2024-12-16T21:05:32.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "User insights loaded"
+2024-12-16T21:05:34.000Z auth-service INFO [http-nio-8080-exec-3] "Login success" userId=111
+2024-12-16T21:05:36.000Z payment-service DEBUG "Scheduled payment check" region=us-west-2
+2024-12-16T21:05:38.000Z user-db INFO [pid=121] "ANALYZE"
+2024-12-16T21:05:40.000Z user-service INFO [thread=http-nio-8080-exec-4] "GET /api/user/orders" time=88ms
+2024-12-16T21:05:42.000Z auth-service WARN [http-nio-8080-exec-5] "Slow DB response" time=702ms
+2024-12-16T21:05:44.000Z payment-service DEBUG "Payment queue check" queueSize=0
+2024-12-16T21:05:46.000Z user-db DEBUG [pid=122] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:06:00.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/recommendations" status=200
+2024-12-16T21:06:00.000Z auth-service INFO [http-nio-8080-exec-7] "Authentication check for userId=402" 
+2024-12-16T21:06:02.000Z payment-service DEBUG [PaymentWorker-1] "Captured payment" orderId=557850
+2024-12-16T21:06:04.000Z user-db INFO [pid=122] transactionStarted txId=q7r8
+2024-12-16T21:06:06.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "Session update" userId=402
+2024-12-16T21:06:08.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=999
+2024-12-16T21:06:10.000Z payment-service INFO [PaymentWorker-2] "Refund processed" orderId=557815
+2024-12-16T21:06:12.000Z user-db DEBUG [pid=123] "Idle=59, Active=41"
+2024-12-16T21:06:14.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/cart" items=3
+2024-12-16T21:06:16.000Z auth-service DEBUG [http-nio-8080-exec-4] "Token validated" userId=847
+2024-12-16T21:06:18.000Z payment-service WARN [PaymentWorker-1] "High latency detected" gateway=Stripe
+2024-12-16T21:06:20.000Z user-db INFO [pid=122] commit txId=q7r8 user=user@db
+2024-12-16T21:06:22.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "Loading user timeline" userId=999
+2024-12-16T21:06:24.000Z auth-service INFO [http-nio-8080-exec-6] "Authentication verified" userId=402
+2024-12-16T21:06:26.000Z payment-service DEBUG [PaymentWorker-2] "Payment queue poll" size=1
+2024-12-16T21:06:28.000Z user-db DEBUG [pid=124] statement="SELECT * FROM users WHERE active=true"
+2024-12-16T21:06:30.000Z user-service INFO [thread=http-nio-8080-exec-7] "POST /api/user/updateProfile" status=200
+2024-12-16T21:06:32.000Z auth-service DEBUG [http-nio-8080-exec-1] "Session refresh" userId=402
+2024-12-16T21:06:34.000Z payment-service INFO "Payment authorized orderId=557851 gateway=PayPal"
+2024-12-16T21:06:36.000Z user-db INFO [pid=124] "ANALYZE completed"
+2024-12-16T21:06:38.000Z user-service DEBUG "Building user feed" userId=111
+2024-12-16T21:06:40.000Z auth-service WARN [http-nio-8080-exec-2] "DB read slowness" time=756ms
+2024-12-16T21:06:42.000Z payment-service DEBUG [PaymentWorker-1] "Next scheduled run in 60s"
+2024-12-16T21:06:44.000Z user-db DEBUG [pid=125] transactionStarted txId=s9t0
+2024-12-16T21:06:46.000Z user-service INFO [thread=http-nio-8080-exec-4] "GET /api/user/orders" time=122ms
+2024-12-16T21:07:00.000Z auth-service INFO [http-nio-8080-exec-5] "Auth token extended" userId=847
+2024-12-16T21:07:00.000Z payment-service INFO [PaymentWorker-2] "Processing payments in queue"
+2024-12-16T21:07:02.000Z user-db INFO [pid=125] commit txId=s9t0 user=user@db
+2024-12-16T21:07:04.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "Loading user settings" userId=847
+2024-12-16T21:07:06.000Z auth-service DEBUG "Session check user=999" 
+2024-12-16T21:07:08.000Z payment-service WARN "Payment gateway slow response" gateway=Stripe
+2024-12-16T21:07:10.000Z user-db DEBUG [pid=126] statement="SELECT pg_sleep(0.1)"
+2024-12-16T21:07:12.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/alerts" userId=999
+2024-12-16T21:07:14.000Z auth-service INFO [http-nio-8080-exec-1] "Login success" userId=111
+2024-12-16T21:07:16.000Z payment-service DEBUG [PaymentWorker-1] "Refund processed" orderId=557816
+2024-12-16T21:07:18.000Z user-db INFO [pid=126] "Idle=56, Active=44" 
+2024-12-16T21:07:20.000Z user-service INFO [thread=http-nio-8080-exec-2] "POST /api/user/order" itemCount=3
+2024-12-16T21:07:22.000Z auth-service DEBUG [http-nio-8080-exec-3] "Validating credentials" userId=402
+2024-12-16T21:07:24.000Z payment-service INFO Payment authorized orderId=557852 gateway=Stripe
+2024-12-16T21:07:26.000Z user-db DEBUG [pid=127] transactionStarted txId=u1v2
+2024-12-16T21:07:28.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/favorites" status=200
+2024-12-16T21:07:30.000Z auth-service WARN [http-nio-8080-exec-6] "Authentication DB response=700ms"
+2024-12-16T21:07:32.000Z payment-service DEBUG [PaymentWorker-2] "Queue poll" queueSize=0
+2024-12-16T21:07:34.000Z user-db INFO [pid=127] commit txId=u1v2 user=user@db
+2024-12-16T21:07:36.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Updating user session" userId=847
+2024-12-16T21:07:38.000Z auth-service INFO [http-nio-8080-exec-1] "Token validation passed" userId=847
+2024-12-16T21:07:40.000Z payment-service INFO [PaymentWorker-1] "Auto-capture completed" orderId=557853
+2024-12-16T21:07:42.000Z user-db DEBUG [pid=128] statement="SELECT count(*) FROM transactions"
+2024-12-16T21:07:44.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/history" time=208ms
+2024-12-16T21:07:46.000Z auth-service DEBUG [http-nio-8080-exec-3] "Session validated" userId=999
+2024-12-16T21:08:00.000Z payment-service INFO Payment refunded orderId=557817 reason="Cancel request"
+2024-12-16T21:08:00.000Z user-db INFO [pid=128] "Vacuum started"
+2024-12-16T21:08:02.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "GET /api/user/profile" userId=402
+2024-12-16T21:08:04.000Z auth-service INFO [http-nio-8080-exec-5] "Authentication success" userId=402
+2024-12-16T21:08:06.000Z payment-service DEBUG [PaymentWorker-2] "Processing new orders"
+2024-12-16T21:08:08.000Z user-db DEBUG [pid=129] transactionStarted txId=w3x4
+2024-12-16T21:08:10.000Z user-service INFO [thread=http-nio-8080-exec-6] "POST /api/user/updateProfile" status=200
+2024-12-16T21:08:12.000Z auth-service DEBUG [http-nio-8080-exec-7] "Validating token" userId=999
+2024-12-16T21:08:14.000Z payment-service INFO "Payment authorized orderId=557854 gateway=PayPal"
+2024-12-16T21:08:16.000Z user-db INFO [pid=129] commit txId=w3x4
+2024-12-16T21:08:18.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "User session extended" userId=402
+2024-12-16T21:08:20.000Z auth-service WARN [http-nio-8080-exec-2] "Auth DB slow" time=602ms
+2024-12-16T21:08:22.000Z payment-service DEBUG [PaymentWorker-1] "Checking payment gateway=Stripe"
+2024-12-16T21:08:24.000Z user-db DEBUG [pid=130] "Idle=58, Active=42"
+2024-12-16T21:08:26.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/orders" items=4
+2024-12-16T21:08:28.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session validated userId=847"
+2024-12-16T21:08:30.000Z payment-service INFO [PaymentWorker-2] "No refunds pending"
+2024-12-16T21:08:32.000Z user-db INFO [pid=130] statement="ANALYZE"
+2024-12-16T21:08:34.000Z user-service DEBUG "Render user feed" userId=999
+2024-12-16T21:08:36.000Z auth-service INFO [http-nio-8080-exec-5] "Login success" userId=111
+2024-12-16T21:08:38.000Z payment-service DEBUG [PaymentWorker-1] "Auto-capture check"
+2024-12-16T21:08:40.000Z user-db DEBUG [pid=131] transactionStarted txId=y5z6 user=user@db
+2024-12-16T21:08:42.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/dashboard" time=145ms
+2024-12-16T21:08:44.000Z auth-service DEBUG [http-nio-8080-exec-7] "Re-auth user=999"
+2024-12-16T21:08:46.000Z payment-service INFO Payment captured orderId=557855 userId=402
+2024-12-16T21:09:00.000Z user-db INFO [pid=131] commit txId=y5z6
+2024-12-16T21:09:00.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "User notifications check" userId=402
+2024-12-16T21:09:02.000Z auth-service INFO [http-nio-8080-exec-2] "Authentication validated" userId=999
+2024-12-16T21:09:04.000Z payment-service WARN [PaymentWorker-2] "Refund delay" orderId=557817
+2024-12-16T21:09:06.000Z user-db DEBUG [pid=132] statement="SELECT * FROM sessions WHERE active=true"
+2024-12-16T21:09:08.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/profile" time=118ms
+2024-12-16T21:09:10.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session keep-alive" userId=402
+2024-12-16T21:09:12.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=557856 gateway=Stripe"
+2024-12-16T21:09:14.000Z user-db INFO [pid=132] "Idle=58, Active=42" pool=HikariPool-1
+2024-12-16T21:09:16.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "Loading user data" userId=847
+2024-12-16T21:09:18.000Z auth-service WARN [http-nio-8080-exec-6] "DB read took 640ms" 
+2024-12-16T21:09:20.000Z payment-service DEBUG [PaymentWorker-2] "Queued payment check" 
+2024-12-16T21:09:22.000Z user-db DEBUG [pid=133] transactionStarted txId=a1b2 user=user@db
+2024-12-16T21:09:24.000Z user-service INFO [thread=http-nio-8080-exec-7] "POST /api/user/updateProfile" status=200
+2024-12-16T21:09:26.000Z auth-service DEBUG "Token validated userId=111"
+2024-12-16T21:09:28.000Z payment-service INFO "Payment refunded orderId=557818 reason=\"Customer request\""
+2024-12-16T21:09:30.000Z user-db INFO [pid=133] commit txId=a1b2
+2024-12-16T21:09:32.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/orders" items=2
+2024-12-16T21:09:34.000Z auth-service INFO [http-nio-8080-exec-2] "Auth succeeded userId=402"
+2024-12-16T21:09:36.000Z payment-service DEBUG [PaymentWorker-1] "Payment queue poll" queueSize=1
+2024-12-16T21:09:38.000Z user-db DEBUG [pid=134] statement="SELECT now()"
+2024-12-16T21:09:40.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/notifications" time=149ms
+2024-12-16T21:09:42.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session validated userId=999"
+2024-12-16T21:09:44.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=557857"
+2024-12-16T21:09:46.000Z user-db DEBUG [pid=135] transactionStarted txId=c3d4
+2024-12-16T21:10:00.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/session" status=200
+2024-12-16T21:10:01.000Z user-db INFO [pid=201] "Idle=55, Active=45" pool=HikariPool-1 environment=production
+2024-12-16T21:10:03.000Z user-service INFO [thread=http-nio-8080-exec-1] "GET /api/user/dashboard" userId=402 time=128ms
+2024-12-16T21:10:05.000Z auth-service DEBUG [http-nio-8080-exec-2] "Validating token" user=847
+2024-12-16T21:10:07.000Z payment-service INFO [PaymentWorker-1] "Processing payments" queueSize=1
+2024-12-16T21:10:09.000Z user-db DEBUG [pid=202] statement="SELECT 1;"
+2024-12-16T21:10:11.000Z user-service INFO [thread=http-nio-8080-exec-2] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:10:13.000Z auth-service INFO [http-nio-8080-exec-3] "Login successful" userId=999
+2024-12-16T21:10:15.000Z payment-service DEBUG [PaymentWorker-2] "Payment authorized orderId=558000 gateway=Stripe"
+2024-12-16T21:10:17.000Z user-db INFO [pid=203] transactionStarted txId=h1i2 user=user@user-db
+2024-12-16T21:10:19.000Z user-service DEBUG "Fetching user notifications" userId=402
+2024-12-16T21:10:21.000Z auth-service WARN [http-nio-8080-exec-4] "Slow DB read" time=640ms
+2024-12-16T21:10:23.000Z payment-service INFO [PaymentWorker-1] "Refund processed" orderId=557900
+2024-12-16T21:10:25.000Z user-db INFO [pid=203] commit txId=h1i2
+2024-12-16T21:10:27.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/history" items=3
+2024-12-16T21:10:29.000Z auth-service DEBUG [http-nio-8080-exec-6] "Session validated" userId=847
+2024-12-16T21:10:31.000Z payment-service DEBUG [PaymentWorker-2] "Checking subscription renewals"
+2024-12-16T21:10:33.000Z user-db DEBUG [pid=204] statement="ANALYZE"
+2024-12-16T21:10:35.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/cart" items=2
+2024-12-16T21:10:37.000Z auth-service INFO [http-nio-8080-exec-1] "Auth token renewed" userId=999
+2024-12-16T21:10:39.000Z payment-service WARN [PaymentWorker-1] "Gateway response delayed" gateway=PayPal
+2024-12-16T21:10:41.000Z user-db INFO [pid=204] "Idle=56, Active=44"
+2024-12-16T21:10:43.000Z user-service DEBUG "Rendering user feed" userId=847
+2024-12-16T21:10:45.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=111
+2024-12-16T21:10:47.000Z payment-service DEBUG [PaymentWorker-2] "Payment queued orderId=558001"
+2024-12-16T21:11:00.000Z user-db DEBUG [pid=205] transactionStarted txId=j3k4
+2024-12-16T21:11:01.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/orders" time=104ms
+2024-12-16T21:11:03.000Z auth-service DEBUG [http-nio-8080-exec-4] "Checking user roles" userId=402
+2024-12-16T21:11:05.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=558002 gateway=Stripe"
+2024-12-16T21:11:07.000Z user-db INFO [pid=205] commit txId=j3k4 user=user@user-db
+2024-12-16T21:11:09.000Z user-service DEBUG "Updating user session" userId=999
+2024-12-16T21:11:11.000Z auth-service WARN [http-nio-8080-exec-5] "Auth DB read slow" time=722ms
+2024-12-16T21:11:13.000Z payment-service DEBUG [PaymentWorker-2] "No refunds pending"
+2024-12-16T21:11:15.000Z user-db DEBUG [pid=206] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:11:17.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/profile" userId=847
+2024-12-16T21:11:19.000Z auth-service INFO [http-nio-8080-exec-7] "Login success" userId=999
+2024-12-16T21:11:21.000Z payment-service INFO [PaymentWorker-1] "Processing scheduled payment" batchId=abcd
+2024-12-16T21:11:23.000Z user-db INFO [pid=206] "Periodic stats: active=44, idle=56"
+2024-12-16T21:11:25.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "Rendering user notifications" userId=111
+2024-12-16T21:11:27.000Z auth-service DEBUG [http-nio-8080-exec-2] "Token validated userId=847"
+2024-12-16T21:11:29.000Z payment-service WARN [PaymentWorker-2] "Payment gateway slowdown" gateway=PayPal
+2024-12-16T21:11:31.000Z user-db DEBUG [pid=207] transactionStarted txId=l5m6
+2024-12-16T21:11:33.000Z user-service INFO [thread=http-nio-8080-exec-4] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:11:35.000Z auth-service INFO [http-nio-8080-exec-5] "Token extended" userId=402
+2024-12-16T21:11:37.000Z payment-service DEBUG [PaymentWorker-1] "Refund initiated orderId=557901"
+2024-12-16T21:11:39.000Z user-db INFO [pid=207] commit txId=l5m6 user=user@db
+2024-12-16T21:11:41.000Z user-service DEBUG "Loading user timeline" userId=847
+2024-12-16T21:11:43.000Z auth-service WARN [http-nio-8080-exec-6] "Slow DB response" time=718ms
+2024-12-16T21:11:45.000Z payment-service INFO [PaymentWorker-2] "Payment captured orderId=558003"
+2024-12-16T21:11:47.000Z user-db DEBUG [pid=208] statement="SELECT version()"
+2024-12-16T21:12:00.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/dashboard" time=190ms
+2024-12-16T21:12:01.000Z auth-service DEBUG [http-nio-8080-exec-1] "Session check" userId=999
+2024-12-16T21:12:03.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=558004 gateway=Stripe"
+2024-12-16T21:12:05.000Z user-db INFO [pid=208] "Idle=55, Active=45"
+2024-12-16T21:12:07.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "GET /api/user/alerts" userId=402
+2024-12-16T21:12:09.000Z auth-service INFO [http-nio-8080-exec-3] "Login success" userId=111
+2024-12-16T21:12:11.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed" orderId=557902
+2024-12-16T21:12:13.000Z user-db DEBUG [pid=209] transactionStarted txId=n7o8
+2024-12-16T21:12:15.000Z user-service INFO [thread=http-nio-8080-exec-4] "POST /api/user/order" itemCount=2
+2024-12-16T21:12:17.000Z auth-service DEBUG [http-nio-8080-exec-5] "Token validation user=402"
+2024-12-16T21:12:19.000Z payment-service WARN [PaymentWorker-1] "Potential gateway backlog" gateway=PayPal
+2024-12-16T21:12:21.000Z user-db INFO [pid=209] commit txId=n7o8 user=user@user-db
+2024-12-16T21:12:23.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "Fetching user data" userId=999
+2024-12-16T21:12:25.000Z auth-service INFO [http-nio-8080-exec-7] "Auth token updated" userId=847
+2024-12-16T21:12:27.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558005 gateway=PayPal"
+2024-12-16T21:12:29.000Z user-db DEBUG [pid=210] statement="ANALYZE"
+2024-12-16T21:12:31.000Z user-service INFO [thread=http-nio-8080-exec-1] "GET /api/user/cart" items=5
+2024-12-16T21:12:33.000Z auth-service WARN [http-nio-8080-exec-2] "Slow authentication query" time=780ms
+2024-12-16T21:12:35.000Z payment-service DEBUG [PaymentWorker-1] "Refund queued" orderId=557903
+2024-12-16T21:12:37.000Z user-db INFO [pid=210] "Periodic cleanup"
+2024-12-16T21:12:39.000Z user-service DEBUG [thread=http-nio-8080-exec-3] "User session refresh" userId=111
+2024-12-16T21:12:41.000Z auth-service INFO [http-nio-8080-exec-4] "Login attempt userId=847" result=SUCCESS
+2024-12-16T21:12:43.000Z payment-service INFO [PaymentWorker-2] "Captured payment orderId=558006"
+2024-12-16T21:12:45.000Z user-db DEBUG [pid=211] transactionStarted txId=p9q0
+2024-12-16T21:12:47.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/notifications" status=200
+2024-12-16T21:13:00.000Z auth-service DEBUG [http-nio-8080-exec-6] "Session validated user=999"
+2024-12-16T21:13:01.000Z payment-service INFO [PaymentWorker-1] "Refund processed" orderId=557904
+2024-12-16T21:13:03.000Z user-db INFO [pid=211] commit txId=p9q0 user=user@user-db
+2024-12-16T21:13:05.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "GET /api/user/feed" userId=402
+2024-12-16T21:13:07.000Z auth-service DEBUG [http-nio-8080-exec-7] "Extending token" userId=847
+2024-12-16T21:13:09.000Z payment-service WARN "Gateway latency rising" gateway=Stripe
+2024-12-16T21:13:11.000Z user-db DEBUG [pid=212] statement="SELECT current_setting('max_connections')"
+2024-12-16T21:13:13.000Z user-service INFO [thread=http-nio-8080-exec-1] "POST /api/user/updateProfile" status=200
+2024-12-16T21:13:15.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=111
+2024-12-16T21:13:17.000Z payment-service DEBUG [PaymentWorker-2] "Subscription renewal in progress"
+2024-12-16T21:13:19.000Z user-db INFO [pid=212] "Idle=57 Active=43"
+2024-12-16T21:13:21.000Z user-service DEBUG [thread=http-nio-8080-exec-3] "User data refreshed" userId=999
+2024-12-16T21:13:23.000Z auth-service WARN [http-nio-8080-exec-4] "DB read took 670ms" 
+2024-12-16T21:13:25.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=558007 gateway=Stripe"
+2024-12-16T21:13:27.000Z user-db DEBUG [pid=213] transactionStarted txId=r1s2
+2024-12-16T21:13:29.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/orders" time=92ms
+2024-12-16T21:13:31.000Z auth-service DEBUG [http-nio-8080-exec-6] "Session verified" userId=847
+2024-12-16T21:13:33.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=557905
+2024-12-16T21:13:35.000Z user-db INFO [pid=213] commit txId=r1s2 user=user@user-db
+2024-12-16T21:13:37.000Z user-service DEBUG "Loading user summary" userId=111
+2024-12-16T21:13:39.000Z auth-service INFO [http-nio-8080-exec-7] "Auth token extended" userId=402
+2024-12-16T21:13:41.000Z payment-service WARN [PaymentWorker-1] "Payment gateway timeout=300ms"
+2024-12-16T21:13:43.000Z user-db DEBUG [pid=214] statement="ANALYZE"
+2024-12-16T21:13:45.000Z user-service INFO [thread=http-nio-8080-exec-1] "GET /api/user/dashboard" time=123ms
+2024-12-16T21:13:47.000Z auth-service DEBUG [http-nio-8080-exec-2] "Validating credentials user=999"
+2024-12-16T21:14:00.000Z payment-service INFO [PaymentWorker-2] "Refund processed orderId=557906"
+2024-12-16T21:14:01.000Z user-db INFO [pid=214] "Idle=58, Active=42" 
+2024-12-16T21:14:03.000Z user-service DEBUG [thread=http-nio-8080-exec-3] "GET /api/user/cart" items=0
+2024-12-16T21:14:05.000Z auth-service INFO [http-nio-8080-exec-4] "Login success" userId=111
+2024-12-16T21:14:07.000Z payment-service DEBUG "Payment gateway checking" gateway=Stripe
+2024-12-16T21:14:09.000Z user-db DEBUG [pid=215] transactionStarted txId=t3u4
+2024-12-16T21:14:11.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/activity" status=200
+2024-12-16T21:14:13.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token validated user=402"
+2024-12-16T21:14:15.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=558008 gateway=PayPal"
+2024-12-16T21:14:17.000Z user-db INFO [pid=215] commit txId=t3u4
+2024-12-16T21:14:19.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "User profile load" userId=999
+2024-12-16T21:14:21.000Z auth-service WARN [http-nio-8080-exec-1] "DB read slow" time=711ms
+2024-12-16T21:14:23.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=557907
+2024-12-16T21:14:25.000Z user-db DEBUG [pid=216] statement="SELECT 1"
+2024-12-16T21:14:27.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/orders" time=95ms
+2024-12-16T21:14:29.000Z auth-service INFO [http-nio-8080-exec-3] "Auth token extended" userId=847
+2024-12-16T21:14:31.000Z payment-service WARN [PaymentWorker-1] "Payment gateway slowdown" gateway=Stripe
+2024-12-16T21:14:33.000Z user-db INFO [pid=216] "Periodic vacuum"
+2024-12-16T21:14:35.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "Building user feed" userId=402
+2024-12-16T21:14:37.000Z auth-service DEBUG [http-nio-8080-exec-5] "Session validated" userId=999
+2024-12-16T21:14:39.000Z payment-service INFO [PaymentWorker-2] "Payment captured orderId=558009"
+2024-12-16T21:14:41.000Z user-db DEBUG [pid=217] transactionStarted txId=v5w6
+2024-12-16T21:14:43.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/preferences" time=80ms
+2024-12-16T21:14:45.000Z auth-service DEBUG [http-nio-8080-exec-7] "Re-auth user=111"
+2024-12-16T21:14:47.000Z payment-service INFO [PaymentWorker-1] "Refund processed orderId=557908"
+2024-12-16T21:15:00.000Z user-db INFO [pid=217] commit txId=v5w6
+2024-12-16T21:15:01.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/dashboard" userId=847
+2024-12-16T21:15:03.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=999
+2024-12-16T21:15:05.000Z payment-service DEBUG [PaymentWorker-2] "Processing payment queue" size=1
+2024-12-16T21:15:07.000Z user-db DEBUG [pid=218] statement="ANALYZE"
+2024-12-16T21:15:09.000Z user-service INFO [thread=http-nio-8080-exec-3] "POST /api/user/updateProfile" status=200
+2024-12-16T21:15:11.000Z auth-service DEBUG [http-nio-8080-exec-4] "Token check" userId=402
+2024-12-16T21:15:13.000Z payment-service WARN [PaymentWorker-1] "Gateway response 350ms" gateway=PayPal
+2024-12-16T21:15:15.000Z user-db INFO [pid=218] "Idle=57 Active=43"
+2024-12-16T21:15:17.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "GET /api/user/cart" items=3
+2024-12-16T21:15:19.000Z auth-service INFO [http-nio-8080-exec-6] "Token extended" userId=847
+2024-12-16T21:15:21.000Z payment-service DEBUG [PaymentWorker-2] "Refund initiated" orderId=557909
+2024-12-16T21:15:23.000Z user-db DEBUG [pid=219] transactionStarted txId=x7y8
+2024-12-16T21:15:25.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/activity" status=200
+2024-12-16T21:15:27.000Z auth-service WARN [http-nio-8080-exec-1] "DB read slowness" time=695ms
+2024-12-16T21:15:29.000Z payment-service INFO [PaymentWorker-1] "Payment authorized orderId=558010 gateway=Stripe"
+2024-12-16T21:15:31.000Z user-db INFO [pid=219] commit txId=x7y8 user=user@user-db
+2024-12-16T21:15:33.000Z user-service DEBUG "Loading user summary" userId=402
+2024-12-16T21:15:35.000Z auth-service INFO [http-nio-8080-exec-2] "Auth token validated" userId=999
+2024-12-16T21:15:37.000Z payment-service DEBUG [PaymentWorker-2] "Payment queued" orderId=558011
+2024-12-16T21:15:39.000Z user-db DEBUG [pid=220] statement="SELECT * FROM orders"
+2024-12-16T21:15:41.000Z user-service INFO [thread=http-nio-8080-exec-4] "POST /api/user/order" itemCount=4
+2024-12-16T21:15:43.000Z auth-service DEBUG [http-nio-8080-exec-5] "Validating session" userId=847
+2024-12-16T21:15:45.000Z payment-service INFO [PaymentWorker-1] "Refund processed" orderId=557910
+2024-12-16T21:15:47.000Z user-db INFO [pid=220] "Periodic cleanup triggered"
+2024-12-16T21:16:00.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/favorites" status=200
+2024-12-16T21:16:01.000Z auth-service DEBUG [http-nio-8080-exec-7] "Re-check token" userId=111
+2024-12-16T21:16:03.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558012 gateway=PayPal"
+2024-12-16T21:16:05.000Z user-db DEBUG [pid=221] transactionStarted txId=z9a0
+2024-12-16T21:16:07.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/alerts" userId=999
+2024-12-16T21:16:09.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=402
+2024-12-16T21:16:11.000Z payment-service DEBUG [PaymentWorker-1] "Queue check" queueSize=1
+2024-12-16T21:16:13.000Z user-db INFO [pid=221] commit txId=z9a0 user=user@user-db
+2024-12-16T21:16:15.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/orders" items=2
+2024-12-16T21:16:17.000Z auth-service DEBUG [http-nio-8080-exec-3] "Token extended" userId=847
+2024-12-16T21:16:19.000Z payment-service WARN [PaymentWorker-2] "Gateway backlog" gateway=Stripe
+2024-12-16T21:16:21.000Z user-db DEBUG [pid=222] statement="ANALYZE"
+2024-12-16T21:16:23.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "Session updated" userId=999
+2024-12-16T21:16:25.000Z auth-service INFO [http-nio-8080-exec-5] "Login attempt" userId=111 result=SUCCESS
+2024-12-16T21:16:27.000Z payment-service DEBUG [PaymentWorker-1] "Processing refund" orderId=557911
+2024-12-16T21:16:29.000Z user-db INFO [pid=222] "Idle=56, Active=44"
+2024-12-16T21:16:31.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/dashboard" time=135ms
+2024-12-16T21:16:33.000Z auth-service WARN [http-nio-8080-exec-7] "DB read took 730ms"
+2024-12-16T21:16:35.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558013 gateway=Stripe"
+2024-12-16T21:16:37.000Z user-db DEBUG [pid=223] transactionStarted txId=b1c2 user=user@db
+2024-12-16T21:16:39.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Loading user feed" userId=402
+2024-12-16T21:16:41.000Z auth-service INFO [http-nio-8080-exec-1] "Auth token validated" userId=999
+2024-12-16T21:16:43.000Z payment-service DEBUG [PaymentWorker-1] "Refund queued" orderId=557912
+2024-12-16T21:16:45.000Z user-db INFO [pid=223] commit txId=b1c2 user=user@user-db
+2024-12-16T21:16:47.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/notifications" status=200
+2024-12-16T21:17:00.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session check user=847"
+2024-12-16T21:17:01.000Z payment-service INFO [PaymentWorker-2] "Refund processed" orderId=557912
+2024-12-16T21:17:03.000Z user-db DEBUG [pid=224] statement="SELECT 1"
+2024-12-16T21:17:05.000Z user-service INFO [thread=http-nio-8080-exec-5] "GET /api/user/cart" userId=111
+2024-12-16T21:17:07.000Z auth-service DEBUG [http-nio-8080-exec-6] "Validating token" user=402
+2024-12-16T21:17:09.000Z payment-service WARN "Gateway slow" gateway=PayPal
+2024-12-16T21:17:11.000Z user-db INFO [pid=224] "Idle=57, Active=43"
+2024-12-16T21:17:13.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Updating user session" userId=999
+2024-12-16T21:17:15.000Z auth-service INFO [http-nio-8080-exec-1] "Login success" userId=847
+2024-12-16T21:17:17.000Z payment-service DEBUG [PaymentWorker-1] "Subscription renewal check"
+2024-12-16T21:17:19.000Z user-db DEBUG [pid=225] transactionStarted txId=d3e4
+2024-12-16T21:17:21.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/orders" items=4
+2024-12-16T21:17:23.000Z auth-service WARN [http-nio-8080-exec-3] "Auth DB read time=690ms"
+2024-12-16T21:17:25.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558014 gateway=Stripe"
+2024-12-16T21:17:27.000Z user-db INFO [pid=225] commit txId=d3e4 user=user@user-db
+2024-12-16T21:17:29.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "User data load" userId=847
+2024-12-16T21:17:31.000Z auth-service INFO [http-nio-8080-exec-5] "Token extended" userId=999
+2024-12-16T21:17:33.000Z payment-service DEBUG [PaymentWorker-1] "Refund processed" orderId=557913
+2024-12-16T21:17:35.000Z user-db DEBUG [pid=226] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:17:37.000Z user-service INFO [thread=http-nio-8080-exec-6] "POST /api/user/order" itemCount=1
+2024-12-16T21:17:39.000Z auth-service DEBUG [http-nio-8080-exec-7] "Session validated" userId=402
+2024-12-16T21:17:41.000Z payment-service WARN [PaymentWorker-2] "Gateway queue time=300ms"
+2024-12-16T21:17:43.000Z user-db INFO [pid=226] "Vacuuming temporary tables"
+2024-12-16T21:17:45.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "User preferences loaded" userId=111
+2024-12-16T21:17:47.000Z auth-service INFO [http-nio-8080-exec-2] "Login success" userId=402
+2024-12-16T21:18:00.000Z payment-service DEBUG [PaymentWorker-1] "Auto-capture completed orderId=558015"
+2024-12-16T21:18:01.000Z user-db DEBUG [pid=227] transactionStarted txId=f5g6
+2024-12-16T21:18:03.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/feed" status=200
+2024-12-16T21:18:05.000Z auth-service DEBUG [http-nio-8080-exec-4] "Token check" userId=999
+2024-12-16T21:18:07.000Z payment-service INFO [PaymentWorker-2] "Processing payment" orderId=558016
+2024-12-16T21:18:09.000Z user-db INFO [pid=227] commit txId=f5g6 user=user@user-db
+2024-12-16T21:18:11.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "Rendering user notifications" userId=847
+2024-12-16T21:18:13.000Z auth-service INFO [http-nio-8080-exec-6] "Auth token extended" userId=111
+2024-12-16T21:18:15.000Z payment-service DEBUG [PaymentWorker-1] "Refund queued" orderId=557914
+2024-12-16T21:18:17.000Z user-db DEBUG [pid=228] statement="ANALYZE"
+2024-12-16T21:18:19.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/cart" time=103ms
+2024-12-16T21:18:21.000Z auth-service WARN [http-nio-8080-exec-1] "Slow DB read" time=755ms
+2024-12-16T21:18:23.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558017 gateway=PayPal"
+2024-12-16T21:18:25.000Z user-db INFO [pid=228] "Idle=56, Active=44"
+2024-12-16T21:18:27.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "User session refresh" userId=999
+2024-12-16T21:18:29.000Z auth-service DEBUG [http-nio-8080-exec-2] "Session validated userId=847"
+2024-12-16T21:18:31.000Z payment-service WARN [PaymentWorker-1] "High latency gateway=Stripe"
+2024-12-16T21:18:33.000Z user-db DEBUG [pid=229] transactionStarted txId=h7i8
+2024-12-16T21:18:35.000Z user-service INFO [thread=http-nio-8080-exec-2] "GET /api/user/orders" items=6
+2024-12-16T21:18:37.000Z auth-service INFO [http-nio-8080-exec-3] "Login success" userId=402
+2024-12-16T21:18:39.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed" orderId=557915
+2024-12-16T21:18:41.000Z user-db INFO [pid=229] commit txId=h7i8
+2024-12-16T21:18:43.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "User data loaded" userId=111
+2024-12-16T21:18:45.000Z auth-service DEBUG [http-nio-8080-exec-5] "Extending token" userId=999
+2024-12-16T21:18:47.000Z payment-service INFO [PaymentWorker-1] "Payment captured orderId=558018"
+2024-12-16T21:19:00.000Z user-db DEBUG [pid=230] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:19:01.000Z user-service INFO [thread=http-nio-8080-exec-6] "GET /api/user/activity" status=200
+2024-12-16T21:19:03.000Z auth-service DEBUG [http-nio-8080-exec-7] "Session check userId=402"
+2024-12-16T21:19:05.000Z payment-service INFO [PaymentWorker-2] "Refund processed" orderId=557916
+2024-12-16T21:19:07.000Z user-db INFO [pid=230] "Idle=57, Active=43"
+2024-12-16T21:19:09.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:19:11.000Z auth-service INFO [http-nio-8080-exec-2] "Auth token validated" userId=999
+2024-12-16T21:19:13.000Z payment-service DEBUG [PaymentWorker-1] "Payment queue poll" queueSize=0
+2024-12-16T21:19:15.000Z user-db DEBUG [pid=231] transactionStarted txId=j9k0
+2024-12-16T21:19:17.000Z user-service INFO [thread=http-nio-8080-exec-3] "GET /api/user/recommendations" time=120ms
+2024-12-16T21:19:19.000Z auth-service WARN [http-nio-8080-exec-4] "DB response took 780ms"
+2024-12-16T21:19:21.000Z payment-service INFO [PaymentWorker-2] "Payment authorized orderId=558019 gateway=Stripe"
+2024-12-16T21:19:23.000Z user-db INFO [pid=231] commit txId=j9k0 user=user@user-db
+2024-12-16T21:19:25.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "User notifications loaded" userId=402
+2024-12-16T21:19:27.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token extended" userId=847
+2024-12-16T21:19:29.000Z payment-service WARN "Gateway stripe latency=350ms"
+2024-12-16T21:19:31.000Z user-db DEBUG [pid=232] statement="SELECT * FROM sessions WHERE active=true"
+2024-12-16T21:19:33.000Z user-service INFO [thread=http-nio-8080-exec-7] "GET /api/user/orders" items=1
+2024-12-16T21:19:35.000Z auth-service DEBUG [http-nio-8080-exec-1] "Session validated" userId=999
+2024-12-16T21:19:37.000Z payment-service INFO [PaymentWorker-1] "Refund queued" orderId=557917
+2024-12-16T21:19:39.000Z user-db INFO [pid=232] "Idle=56, Active=44"
+2024-12-16T21:19:41.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "User detail refresh" userId=111
+2024-12-16T21:19:43.000Z auth-service INFO [http-nio-8080-exec-3] "Login success" userId=402
+2024-12-16T21:19:45.000Z payment-service DEBUG [PaymentWorker-2] "Processing queued payment" orderId=558020
+2024-12-16T21:19:47.000Z user-db DEBUG [pid=233] transactionStarted txId=l1m2
+2024-12-16T21:20:00.000Z user-service INFO [thread=http-nio-8080-exec-4] "GET /api/user/session" status=200
+2024-12-16T21:20:01.000Z user-db INFO  [pid=301] "Idle=55, Active=45" pool=HikariPool-1
+2024-12-16T21:20:02.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/profile" userId=402
+2024-12-16T21:20:03.000Z auth-service INFO  [http-nio-8080-exec-2] "Login success" userId=999
+2024-12-16T21:20:04.000Z payment-service INFO  [PaymentWorker-1] "Processing payment queueSize=2"
+2024-12-16T21:20:05.000Z user-db DEBUG [pid=302] statement="SELECT version()" 
+2024-12-16T21:20:06.000Z user-service INFO  [thread=http-nio-8080-exec-2] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:20:07.000Z auth-service WARN  [http-nio-8080-exec-3] "DB read slow" time=620ms
+2024-12-16T21:20:08.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued orderId=558021"
+2024-12-16T21:20:09.000Z user-db INFO  [pid=303] transactionStarted txId=a1b2 user=user@db
+2024-12-16T21:20:10.000Z user-service DEBUG "Fetching user notifications" userId=111
+2024-12-16T21:20:11.000Z auth-service INFO  [http-nio-8080-exec-4] "Authentication verified userId=847"
+2024-12-16T21:20:12.000Z payment-service INFO  "Payment authorized orderId=558022 gateway=Stripe"
+2024-12-16T21:20:13.000Z user-db INFO  [pid=303] commit txId=a1b2
+2024-12-16T21:20:14.000Z user-service INFO  [thread=http-nio-8080-exec-5] "GET /api/user/orders" items=3
+2024-12-16T21:20:15.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token refresh" userId=999
+2024-12-16T21:20:16.000Z payment-service WARN  [PaymentWorker-1] "PayPal gateway latency=350ms"
+2024-12-16T21:20:17.000Z user-db DEBUG [pid=304] statement="ANALYZE"
+2024-12-16T21:20:18.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/dashboard" status=200
+2024-12-16T21:20:19.000Z auth-service INFO  [http-nio-8080-exec-1] "Login attempt userId=402 success"
+2024-12-16T21:20:20.000Z payment-service DEBUG [PaymentWorker-2] "Payment captured orderId=558023"
+2024-12-16T21:20:21.000Z user-db INFO  [pid=304] "Idle=56, Active=44"
+2024-12-16T21:20:22.000Z user-service DEBUG "Rendering user feed" userId=111
+2024-12-16T21:20:23.000Z auth-service WARN  [http-nio-8080-exec-2] "Auth DB read took 700ms"
+2024-12-16T21:20:24.000Z payment-service INFO  [PaymentWorker-1] "Refund processed orderId=558024"
+2024-12-16T21:21:00.000Z user-db DEBUG [pid=305] transactionStarted txId=c3d4
+2024-12-16T21:21:01.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/cart" items=2
+2024-12-16T21:21:02.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session validation" userId=847
+2024-12-16T21:21:03.000Z payment-service WARN  [PaymentWorker-2] "Stripe gateway backlog"
+2024-12-16T21:21:04.000Z user-db INFO  [pid=305] commit txId=c3d4
+2024-12-16T21:21:05.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "POST /api/user/order" itemCount=1
+2024-12-16T21:21:06.000Z auth-service INFO  [http-nio-8080-exec-2] "Login success" userId=999
+2024-12-16T21:21:07.000Z payment-service DEBUG [PaymentWorker-1] "Refund queued" orderId=558025
+2024-12-16T21:21:08.000Z user-db DEBUG [pid=306] statement="SELECT 1"
+2024-12-16T21:21:09.000Z user-service INFO  [thread=http-nio-8080-exec-2] "GET /api/user/favorites" status=200
+2024-12-16T21:21:10.000Z auth-service WARN  [http-nio-8080-exec-3] "Authentication slow" time=745ms
+2024-12-16T21:21:11.000Z payment-service INFO  [PaymentWorker-2] "Payment authorized orderId=558026 gateway=PayPal"
+2024-12-16T21:21:12.000Z user-db INFO  [pid=306] "Idle=57, Active=43"
+2024-12-16T21:21:13.000Z user-service DEBUG "Session refresh" userId=402
+2024-12-16T21:21:14.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token renewed" userId=847
+2024-12-16T21:21:15.000Z payment-service WARN  [PaymentWorker-1] "PayPal gateway delay=400ms"
+2024-12-16T21:21:16.000Z user-db DEBUG [pid=307] transactionStarted txId=e5f6
+2024-12-16T21:21:17.000Z user-service INFO  [thread=http-nio-8080-exec-4] "GET /api/user/activity" time=130ms
+2024-12-16T21:21:18.000Z auth-service INFO  [http-nio-8080-exec-5] "Token validated" userId=111
+2024-12-16T21:21:19.000Z payment-service DEBUG [PaymentWorker-2] "No refunds pending"
+2024-12-16T21:21:20.000Z user-db INFO  [pid=307] commit txId=e5f6 user=user@db
+2024-12-16T21:21:21.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Loading user timeline" userId=999
+2024-12-16T21:21:22.000Z auth-service WARN  [http-nio-8080-exec-1] "DB read=690ms"
+2024-12-16T21:21:23.000Z payment-service INFO  [PaymentWorker-1] "Payment captured orderId=558027"
+2024-12-16T21:21:24.000Z user-db DEBUG [pid=308] statement="ANALYZE"
+2024-12-16T21:22:00.000Z user-service INFO  [thread=http-nio-8080-exec-2] "GET /api/user/notifications" time=155ms
+2024-12-16T21:22:01.000Z auth-service DEBUG [http-nio-8080-exec-3] "Session re-check userId=999"
+2024-12-16T21:22:02.000Z payment-service INFO  [PaymentWorker-2] "Refund processed orderId=558028"
+2024-12-16T21:22:03.000Z user-db INFO  [pid=308] "Idle=56, Active=44"
+2024-12-16T21:22:04.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/cart" userId=847
+2024-12-16T21:22:05.000Z auth-service INFO  [http-nio-8080-exec-2] "Login success" userId=111
+2024-12-16T21:22:06.000Z payment-service DEBUG [PaymentWorker-1] "Subscription renewal check"
+2024-12-16T21:22:07.000Z user-db DEBUG [pid=309] transactionStarted txId=g7h8
+2024-12-16T21:22:08.000Z user-service INFO  [thread=http-nio-8080-exec-3] "POST /api/user/updateProfile" status=200
+2024-12-16T21:22:09.000Z auth-service DEBUG [http-nio-8080-exec-4] "Validating token user=402"
+2024-12-16T21:22:10.000Z payment-service WARN  [PaymentWorker-2] "Stripe gateway high latency"
+2024-12-16T21:22:11.000Z user-db INFO  [pid=309] commit txId=g7h8 user=user@db
+2024-12-16T21:22:12.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "Rendering user feed" userId=999
+2024-12-16T21:22:13.000Z auth-service INFO  [http-nio-8080-exec-6] "Auth token extended" userId=847
+2024-12-16T21:22:14.000Z payment-service INFO  [PaymentWorker-1] "Payment authorized orderId=558029 gateway=PayPal"
+2024-12-16T21:22:15.000Z user-db DEBUG [pid=310] statement="SELECT current_database()"
+2024-12-16T21:22:16.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/orders" items=4
+2024-12-16T21:22:17.000Z auth-service WARN  [http-nio-8080-exec-1] "Auth DB read=710ms"
+2024-12-16T21:22:18.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued orderId=558030"
+2024-12-16T21:22:19.000Z user-db INFO  [pid=310] "Periodic cleanup triggered"
+2024-12-16T21:22:20.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "User session refresh" userId=111
+2024-12-16T21:22:21.000Z auth-service INFO  [http-nio-8080-exec-3] "Login success" userId=999
+2024-12-16T21:22:22.000Z payment-service WARN  [PaymentWorker-1] "PayPal gateway backlog=300ms"
+2024-12-16T21:22:23.000Z user-db DEBUG [pid=311] transactionStarted txId=i9j0
+2024-12-16T21:22:24.000Z user-service INFO  [thread=http-nio-8080-exec-4] "GET /api/user/dashboard" time=188ms
+2024-12-16T21:23:00.000Z auth-service DEBUG [http-nio-8080-exec-5] "Session validated user=847"
+2024-12-16T21:23:01.000Z payment-service INFO  [PaymentWorker-2] "Processing queued payment" orderId=558031
+2024-12-16T21:23:02.000Z user-db INFO  [pid=311] commit txId=i9j0 user=user@db
+2024-12-16T21:23:03.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "GET /api/user/alerts" userId=402
+2024-12-16T21:23:04.000Z auth-service DEBUG [http-nio-8080-exec-6] "Extending token" userId=111
+2024-12-16T21:23:05.000Z payment-service WARN  "Stripe gateway slow" latency=380ms
+2024-12-16T21:23:06.000Z user-db DEBUG [pid=312] statement="SELECT count(*) FROM users"
+2024-12-16T21:23:07.000Z user-service INFO  [thread=http-nio-8080-exec-7] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:23:08.000Z auth-service INFO  [http-nio-8080-exec-1] "Login success" userId=402
+2024-12-16T21:23:09.000Z payment-service DEBUG [PaymentWorker-1] "Refund processed orderId=558032"
+2024-12-16T21:23:10.000Z user-db INFO  [pid=312] "Idle=55, Active=45"
+2024-12-16T21:23:11.000Z user-service DEBUG "Building user feed" userId=999
+2024-12-16T21:23:12.000Z auth-service WARN  [http-nio-8080-exec-2] "Auth DB read took 750ms"
+2024-12-16T21:23:13.000Z payment-service INFO  [PaymentWorker-2] "Payment authorized orderId=558033 gateway=PayPal"
+2024-12-16T21:23:14.000Z user-db DEBUG [pid=313] transactionStarted txId=k1l2
+2024-12-16T21:23:15.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/history" items=0
+2024-12-16T21:23:16.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session check userId=847"
+2024-12-16T21:23:17.000Z payment-service WARN  [PaymentWorker-1] "PayPal gateway queue=2"
+2024-12-16T21:23:18.000Z user-db INFO  [pid=313] commit txId=k1l2 user=user@db
+2024-12-16T21:23:19.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "GET /api/user/dashboard" userId=111
+2024-12-16T21:23:20.000Z auth-service INFO  [http-nio-8080-exec-5] "Token validated" userId=999
+2024-12-16T21:23:21.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=558034
+2024-12-16T21:23:22.000Z user-db DEBUG [pid=314] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:23:23.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/preferences" time=120ms
+2024-12-16T21:23:24.000Z auth-service DEBUG [http-nio-8080-exec-1] "Re-auth user=847"
+2024-12-16T21:24:00.000Z payment-service INFO  [PaymentWorker-1] "Payment captured orderId=558035"
+2024-12-16T21:24:01.000Z user-db INFO  [pid=314] "Idle=56, Active=44"
+2024-12-16T21:24:02.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "GET /api/user/cart" userId=999
+2024-12-16T21:24:03.000Z auth-service INFO  [http-nio-8080-exec-3] "Login attempt userId=111 result=SUCCESS"
+2024-12-16T21:24:04.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed orderId=558036"
+2024-12-16T21:24:05.000Z user-db DEBUG [pid=315] transactionStarted txId=m3n4
+2024-12-16T21:24:06.000Z user-service INFO  [thread=http-nio-8080-exec-4] "GET /api/user/orders" items=3
+2024-12-16T21:24:07.000Z auth-service DEBUG [http-nio-8080-exec-5] "Session validated userId=847"
+2024-12-16T21:24:08.000Z payment-service WARN  "Stripe gateway latency=390ms"
+2024-12-16T21:24:09.000Z user-db INFO  [pid=315] commit txId=m3n4 user=user@db
+2024-12-16T21:24:10.000Z user-service DEBUG "Updating user session" userId=402
+2024-12-16T21:24:11.000Z auth-service INFO  [http-nio-8080-exec-6] "Auth token extended" userId=999
+2024-12-16T21:24:12.000Z payment-service DEBUG [PaymentWorker-1] "Queue check" size=1
+2024-12-16T21:24:13.000Z user-db DEBUG [pid=316] statement="SELECT 1"
+2024-12-16T21:24:14.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/dashboard" time=144ms
+2024-12-16T21:24:15.000Z auth-service WARN  [http-nio-8080-exec-1] "DB read took 720ms"
+2024-12-16T21:24:16.000Z payment-service INFO  [PaymentWorker-2] "Payment authorized orderId=558037 gateway=PayPal"
+2024-12-16T21:24:17.000Z user-db INFO  [pid=316] "Periodic stats"
+2024-12-16T21:24:18.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "User feed rendering" userId=111
+2024-12-16T21:24:19.000Z auth-service DEBUG [http-nio-8080-exec-2] "Token verification" userId=402
+2024-12-16T21:24:20.000Z payment-service WARN  [PaymentWorker-1] "Gateway queue=2"
+2024-12-16T21:24:21.000Z user-db DEBUG [pid=317] transactionStarted txId=o5p6
+2024-12-16T21:24:22.000Z user-service INFO  [thread=http-nio-8080-exec-3] "POST /api/user/updateProfile" status=200
+2024-12-16T21:24:23.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session extended" userId=999
+2024-12-16T21:24:24.000Z payment-service INFO  [PaymentWorker-2] "Refund queued" orderId=558038
+2024-12-16T21:25:00.000Z user-db INFO  [pid=317] commit txId=o5p6
+2024-12-16T21:25:01.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "GET /api/user/activity" userId=999
+2024-12-16T21:25:02.000Z auth-service INFO  [http-nio-8080-exec-6] "Login success" userId=847
+2024-12-16T21:25:03.000Z payment-service DEBUG [PaymentWorker-1] "Subscription renewal" batchId=subs123
+2024-12-16T21:25:04.000Z user-db DEBUG [pid=318] statement="ANALYZE"
+2024-12-16T21:25:05.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/dashboard" time=116ms
+2024-12-16T21:25:06.000Z auth-service DEBUG [http-nio-8080-exec-1] "Extending token" userId=402
+2024-12-16T21:25:07.000Z payment-service WARN  "Stripe gateway backlog=310ms"
+2024-12-16T21:25:08.000Z user-db INFO  [pid=318] "Idle=56, Active=44"
+2024-12-16T21:25:09.000Z user-service DEBUG "Building user feed" userId=847
+2024-12-16T21:25:10.000Z auth-service INFO  [http-nio-8080-exec-2] "Auth token validated" userId=999
+2024-12-16T21:25:11.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed orderId=558039"
+2024-12-16T21:25:12.000Z user-db DEBUG [pid=319] transactionStarted txId=q7r8
+2024-12-16T21:25:13.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/orders" items=1
+2024-12-16T21:25:14.000Z auth-service WARN  [http-nio-8080-exec-4] "DB read slow" time=715ms
+2024-12-16T21:25:15.000Z payment-service INFO  [PaymentWorker-1] "Payment authorized orderId=558040 gateway=Stripe"
+2024-12-16T21:25:16.000Z user-db INFO  [pid=319] commit txId=q7r8
+2024-12-16T21:25:17.000Z user-service DEBUG [thread=http-nio-8080-exec-6] "User session refresh" userId=999
+2024-12-16T21:25:18.000Z auth-service INFO  [http-nio-8080-exec-5] "Token extended" userId=402
+2024-12-16T21:25:19.000Z payment-service DEBUG [PaymentWorker-2] "Payment queued orderId=558041"
+2024-12-16T21:25:20.000Z user-db DEBUG [pid=320] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:25:21.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/alerts" status=200
+2024-12-16T21:25:22.000Z auth-service DEBUG [http-nio-8080-exec-1] "Validating session" userId=847
+2024-12-16T21:25:23.000Z payment-service INFO  [PaymentWorker-1] "Refund queued" orderId=558042
+2024-12-16T21:25:24.000Z user-db INFO  [pid=320] "Vacuuming temp tables"
+2024-12-16T21:26:00.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "GET /api/user/favorites" userId=111
+2024-12-16T21:26:01.000Z auth-service INFO  [http-nio-8080-exec-3] "Login success" userId=402
+2024-12-16T21:26:02.000Z payment-service DEBUG [PaymentWorker-2] "Payment authorized orderId=558043 gateway=PayPal"
+2024-12-16T21:26:03.000Z user-db DEBUG [pid=321] transactionStarted txId=s9t0
+2024-12-16T21:26:04.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "GET /api/user/orders" userId=847
+2024-12-16T21:26:05.000Z auth-service DEBUG [http-nio-8080-exec-5] "Extending token" userId=999
+2024-12-16T21:26:06.000Z payment-service WARN  [PaymentWorker-1] "Gateway backlog=2" gateway=Stripe
+2024-12-16T21:26:07.000Z user-db INFO  [pid=321] commit txId=s9t0 user=user@db
+2024-12-16T21:26:08.000Z user-service INFO  [thread=http-nio-8080-exec-6] "GET /api/user/dashboard" status=200
+2024-12-16T21:26:09.000Z auth-service WARN  [http-nio-8080-exec-1] "DB read=680ms"
+2024-12-16T21:26:10.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed orderId=558044"
+2024-12-16T21:26:11.000Z user-db DEBUG [pid=322] statement="SELECT count(*) FROM orders"
+2024-12-16T21:26:12.000Z user-service DEBUG "User feed load" userId=111
+2024-12-16T21:26:13.000Z auth-service INFO  [http-nio-8080-exec-2] "Login success" userId=847
+2024-12-16T21:26:14.000Z payment-service INFO  [PaymentWorker-1] "Payment captured orderId=558045"
+2024-12-16T21:26:15.000Z user-db INFO  [pid=322] "Idle=55, Active=45"
+2024-12-16T21:26:16.000Z user-service DEBUG [thread=http-nio-8080-exec-3] "Updating user data" userId=402
+2024-12-16T21:26:17.000Z auth-service DEBUG [http-nio-8080-exec-4] "Token validated" userId=999
+2024-12-16T21:26:18.000Z payment-service WARN  "Stripe gateway slow=340ms"
+2024-12-16T21:26:19.000Z user-db DEBUG [pid=323] transactionStarted txId=u1v2
+2024-12-16T21:26:20.000Z user-service INFO  [thread=http-nio-8080-exec-5] "GET /api/user/cart" items=4
+2024-12-16T21:26:21.000Z auth-service INFO  [http-nio-8080-exec-6] "Auth token extended" userId=111
+2024-12-16T21:26:22.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=558046
+2024-12-16T21:26:23.000Z user-db INFO  [pid=323] commit txId=u1v2 user=user@db
+2024-12-16T21:26:24.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Rendering user notifications" userId=999
+2024-12-16T21:27:00.000Z auth-service DEBUG [http-nio-8080-exec-1] "Session check user=847"
+2024-12-16T21:27:01.000Z payment-service INFO  [PaymentWorker-1] "Payment authorized orderId=558047 gateway=Stripe"
+2024-12-16T21:27:02.000Z user-db DEBUG [pid=324] statement="SELECT 1"
+2024-12-16T21:27:03.000Z user-service INFO  [thread=http-nio-8080-exec-1] "GET /api/user/orders" time=103ms
+2024-12-16T21:27:04.000Z auth-service DEBUG [http-nio-8080-exec-2] "Session validated" user=402
+2024-12-16T21:27:05.000Z payment-service WARN  "PayPal gateway queue=3"
+2024-12-16T21:27:06.000Z user-db INFO  [pid=324] "Idle=56, Active=44"
+2024-12-16T21:27:07.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "POST /api/user/updateProfile" status=200
+2024-12-16T21:27:08.000Z auth-service INFO  [http-nio-8080-exec-3] "Login success" userId=111
+2024-12-16T21:27:09.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed" orderId=558048
+2024-12-16T21:27:10.000Z user-db DEBUG [pid=325] transactionStarted txId=w3x4
+2024-12-16T21:27:11.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/cart" items=1
+2024-12-16T21:27:12.000Z auth-service WARN  [http-nio-8080-exec-4] "DB read=650ms"
+2024-12-16T21:27:13.000Z payment-service INFO  [PaymentWorker-1] "Payment captured orderId=558049"
+2024-12-16T21:27:14.000Z user-db INFO  [pid=325] commit txId=w3x4
+2024-12-16T21:27:15.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "User data load" userId=402
+2024-12-16T21:27:16.000Z auth-service INFO  [http-nio-8080-exec-6] "Auth token validated" userId=999
+2024-12-16T21:27:17.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=558050
+2024-12-16T21:27:18.000Z user-db DEBUG [pid=326] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:27:19.000Z user-service INFO  [thread=http-nio-8080-exec-7] "GET /api/user/dashboard" time=111ms
+2024-12-16T21:27:20.000Z auth-service DEBUG [http-nio-8080-exec-1] "Re-auth user=402"
+2024-12-16T21:27:21.000Z payment-service WARN  [PaymentWorker-1] "Stripe gateway partial slowdown"
+2024-12-16T21:27:22.000Z user-db INFO  [pid=326] "Vacuuming indexes"
+2024-12-16T21:27:23.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "Updating user session" userId=111
+2024-12-16T21:27:24.000Z auth-service INFO  [http-nio-8080-exec-2] "Token extended" userId=847
+2024-12-16T21:28:00.000Z payment-service DEBUG [PaymentWorker-2] "Refund processed orderId=558051"
+2024-12-16T21:28:01.000Z user-db DEBUG [pid=327] transactionStarted txId=y5z6
+2024-12-16T21:28:02.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/activity" userId=999
+2024-12-16T21:28:03.000Z auth-service DEBUG [http-nio-8080-exec-4] "Token check" userId=111
+2024-12-16T21:28:04.000Z payment-service INFO  [PaymentWorker-1] "Payment authorized orderId=558052 gateway=PayPal"
+2024-12-16T21:28:05.000Z user-db INFO  [pid=327] commit txId=y5z6 user=user@db
+2024-12-16T21:28:06.000Z user-service DEBUG [thread=http-nio-8080-exec-5] "User notifications load" userId=402
+2024-12-16T21:28:07.000Z auth-service INFO  [http-nio-8080-exec-6] "Login success" userId=847
+2024-12-16T21:28:08.000Z payment-service DEBUG [PaymentWorker-2] "Refund queued" orderId=558053
+2024-12-16T21:28:09.000Z user-db DEBUG [pid=328] statement="ANALYZE"
+2024-12-16T21:28:10.000Z user-service INFO  [thread=http-nio-8080-exec-7] "POST /api/user/updateProfile" status=200
+2024-12-16T21:28:11.000Z auth-service WARN  [http-nio-8080-exec-1] "DB read=760ms"
+2024-12-16T21:28:12.000Z payment-service INFO  [PaymentWorker-1] "Payment captured orderId=558054"
+2024-12-16T21:28:13.000Z user-db INFO  [pid=328] "Idle=55, Active=45"
+2024-12-16T21:28:14.000Z user-service DEBUG [thread=http-nio-8080-exec-1] "GET /api/user/orders" items=2
+2024-12-16T21:28:15.000Z auth-service DEBUG [http-nio-8080-exec-2] "Validating session userId=999"
+2024-12-16T21:28:16.000Z payment-service WARN  [PaymentWorker-2] "Stripe gateway backlog=320ms"
+2024-12-16T21:28:17.000Z user-db DEBUG [pid=329] transactionStarted txId=a1b2
+2024-12-16T21:28:18.000Z user-service INFO  [thread=http-nio-8080-exec-2] "GET /api/user/cart" time=121ms
+2024-12-16T21:28:19.000Z auth-service INFO  [http-nio-8080-exec-3] "Token extended" userId=847
+2024-12-16T21:28:20.000Z payment-service DEBUG [PaymentWorker-1] "Refund processed" orderId=558055
+2024-12-16T21:28:21.000Z user-db INFO  [pid=329] commit txId=a1b2
+2024-12-16T21:28:22.000Z user-service DEBUG [thread=http-nio-8080-exec-3] "Loading user preferences" userId=847
+2024-12-16T21:28:23.000Z auth-service DEBUG [http-nio-8080-exec-4] "Re-auth user=111"
+2024-12-16T21:28:24.000Z payment-service INFO  [PaymentWorker-2] "Payment authorized orderId=558056 gateway=Stripe"
+2024-12-16T21:29:00.000Z user-db DEBUG [pid=330] statement="SELECT pg_sleep(0.05)"
+2024-12-16T21:29:01.000Z user-service INFO  [thread=http-nio-8080-exec-5] "GET /api/user/dashboard" userId=402
+2024-12-16T21:29:02.000Z auth-service DEBUG [http-nio-8080-exec-6] "Token validated" userId=999
+2024-12-16T21:29:03.000Z payment-service WARN  [PaymentWorker-1] "PayPal gateway queue=4"
+2024-12-16T21:29:04.000Z user-db INFO  [pid=330] "Idle=56, Active=44"
+2024-12-16T21:29:05.000Z user-service DEBUG [thread=http-nio-8080-exec-7] "Fetching user notifications" userId=111
+2024-12-16T21:29:06.000Z auth-service INFO  [http-nio-8080-exec-1] "Login attempt" userId=847 result=SUCCESS
+2024-12-16T21:29:07.000Z payment-service DEBUG [PaymentWorker-2] "Subscription renewal in progress"
+2024-12-16T21:29:08.000Z user-db DEBUG [pid=331] transactionStarted txId=c3d4
+2024-12-16T21:29:09.000Z user-service INFO  [thread=http-nio-8080-exec-1] "GET /api/user/alerts" time=107ms
+2024-12-16T21:29:10.000Z auth-service WARN  [http-nio-8080-exec-2] "Slow authentication check" time=710ms
+2024-12-16T21:29:11.000Z payment-service INFO  [PaymentWorker-1] "Payment authorized orderId=558057 gateway=Stripe"
+2024-12-16T21:29:12.000Z user-db INFO  [pid=331] commit txId=c3d4 user=user@db
+2024-12-16T21:29:13.000Z user-service DEBUG [thread=http-nio-8080-exec-2] "Rendering user feed" userId=402
+2024-12-16T21:29:14.000Z auth-service DEBUG [http-nio-8080-exec-3] "Token renewed" userId=999
+2024-12-16T21:29:15.000Z payment-service WARN  [PaymentWorker-2] "Refund delayed orderId=558058"
+2024-12-16T21:29:16.000Z user-db DEBUG [pid=332] statement="SELECT * FROM sessions WHERE active=true"
+2024-12-16T21:29:17.000Z user-service INFO  [thread=http-nio-8080-exec-3] "GET /api/user/orders" items=2
+2024-12-16T21:29:18.000Z auth-service DEBUG [http-nio-8080-exec-4] "Session validated" userId=402
+2024-12-16T21:29:19.000Z payment-service DEBUG [PaymentWorker-1] "Refund processed orderId=558059"
+2024-12-16T21:29:20.000Z user-db INFO  [pid=332] "Idle=57, Active=43"
+2024-12-16T21:29:21.000Z user-service DEBUG [thread=http-nio-8080-exec-4] "POST /api/user/updatePreferences" status=200
+2024-12-16T21:29:22.000Z auth-service INFO  [http-nio-8080-exec-5] "Auth token extended" userId=847
+2024-12-16T21:29:23.000Z payment-service DEBUG [PaymentWorker-2] "Payment captured orderId=558060"
+2024-12-16T21:29:24.000Z user-db DEBUG [pid=333] transactionStarted txId=e5f6
+2024-12-16T21:30:00.000Z user-service INFO  [thread=http-nio-8080-exec-6] "GET /api/user/session" status=200
+2024-12-16T21:30:01.000Z user-db INFO [pid=401] “Pool usage: idle=55, active=45”
+2024-12-16T21:30:02.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “GET /api/user/profile”
+2024-12-16T21:30:03.000Z auth-service INFO [http-nio-8080-exec-2] “Login success userId=999”
+2024-12-16T21:30:04.000Z payment-service INFO [PaymentWorker-1] “Processing payment queueSize=2”
+2024-12-16T21:30:05.000Z user-db DEBUG [pid=402] statement=“SELECT version()”
+2024-12-16T21:30:06.000Z user-service INFO [thread=http-nio-8080-exec-2] “POST /api/user/updatePreferences status=200”
+2024-12-16T21:30:07.000Z auth-service WARN [http-nio-8080-exec-3] “DB read slow time=640ms”
+2024-12-16T21:30:08.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558061”
+2024-12-16T21:30:09.000Z user-db INFO [pid=403] transactionStarted txId=a1b2 user=user@db
+2024-12-16T21:30:10.000Z user-service DEBUG “Fetching user notifications userId=111”
+2024-12-16T21:30:11.000Z auth-service INFO [http-nio-8080-exec-4] “Authentication verified userId=847”
+2024-12-16T21:30:12.000Z payment-service INFO “Payment authorized orderId=558062 gateway=Stripe”
+2024-12-16T21:30:13.000Z user-db INFO [pid=403] commit txId=a1b2
+2024-12-16T21:30:14.000Z user-service INFO [thread=http-nio-8080-exec-5] “GET /api/user/orders items=3”
+2024-12-16T21:30:15.000Z auth-service DEBUG [http-nio-8080-exec-6] “Token refresh userId=999”
+2024-12-16T21:30:16.000Z payment-service WARN [PaymentWorker-1] “Gateway latency=350ms gateway=PayPal”
+2024-12-16T21:30:17.000Z user-db DEBUG [pid=404] statement=“ANALYZE”
+2024-12-16T21:30:18.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/dashboard status=200”
+2024-12-16T21:30:19.000Z auth-service INFO [http-nio-8080-exec-1] “Login success userId=402”
+2024-12-16T21:30:20.000Z payment-service DEBUG [PaymentWorker-2] “Payment captured orderId=558063”
+2024-12-16T21:30:21.000Z user-db INFO [pid=404] “Idle=56, Active=44”
+2024-12-16T21:30:22.000Z user-service DEBUG “Rendering user feed userId=111”
+2024-12-16T21:30:23.000Z auth-service WARN [http-nio-8080-exec-2] “Auth DB read took 710ms”
+2024-12-16T21:30:24.000Z payment-service INFO [PaymentWorker-1] “Refund processed orderId=558064”
+2024-12-16T21:31:00.000Z user-db DEBUG [pid=405] transactionStarted txId=j3k4
+2024-12-16T21:31:01.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/cart items=2”
+2024-12-16T21:31:02.000Z auth-service DEBUG [http-nio-8080-exec-4] “Session validation userId=847”
+2024-12-16T21:31:03.000Z payment-service WARN [PaymentWorker-2] “Stripe gateway backlog”
+2024-12-16T21:31:04.000Z user-db INFO [pid=405] commit txId=j3k4 user=user@db
+2024-12-16T21:31:05.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “POST /api/user/order itemCount=1”
+2024-12-16T21:31:06.000Z auth-service INFO [http-nio-8080-exec-2] “Login success userId=999”
+2024-12-16T21:31:07.000Z payment-service DEBUG [PaymentWorker-1] “Refund queued orderId=558065”
+2024-12-16T21:31:08.000Z user-db DEBUG [pid=406] statement=“SELECT 1”
+2024-12-16T21:31:09.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/favorites status=200”
+2024-12-16T21:31:10.000Z auth-service WARN [http-nio-8080-exec-3] “Authentication slow time=712ms”
+2024-12-16T21:31:11.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558066 gateway=PayPal”
+2024-12-16T21:31:12.000Z user-db INFO [pid=406] “Idle=57, Active=43”
+2024-12-16T21:31:13.000Z user-service DEBUG “Session refresh userId=402”
+2024-12-16T21:31:14.000Z auth-service DEBUG [http-nio-8080-exec-6] “Token renewed userId=847”
+2024-12-16T21:31:15.000Z payment-service WARN [PaymentWorker-1] “PayPal gateway delay=400ms”
+2024-12-16T21:31:16.000Z user-db DEBUG [pid=407] transactionStarted txId=l5m6
+2024-12-16T21:31:17.000Z user-service INFO [thread=http-nio-8080-exec-4] “GET /api/user/activity time=130ms”
+2024-12-16T21:31:18.000Z auth-service INFO [http-nio-8080-exec-5] “Token validated userId=111”
+2024-12-16T21:31:19.000Z payment-service DEBUG [PaymentWorker-2] “No refunds pending”
+2024-12-16T21:31:20.000Z user-db INFO [pid=407] commit txId=l5m6 user=user@db
+2024-12-16T21:31:21.000Z user-service DEBUG [thread=http-nio-8080-exec-7] “Loading user timeline userId=999”
+2024-12-16T21:31:22.000Z auth-service WARN [http-nio-8080-exec-1] “DB read=690ms”
+2024-12-16T21:31:23.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558067”
+2024-12-16T21:31:24.000Z user-db DEBUG [pid=408] statement=“ANALYZE”
+2024-12-16T21:32:00.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/notifications time=155ms”
+2024-12-16T21:32:01.000Z auth-service DEBUG [http-nio-8080-exec-3] “Session re-check userId=999”
+2024-12-16T21:32:02.000Z payment-service INFO [PaymentWorker-2] “Refund processed orderId=558068”
+2024-12-16T21:32:03.000Z user-db INFO [pid=408] “Idle=56, Active=44”
+2024-12-16T21:32:04.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “GET /api/user/cart userId=847”
+2024-12-16T21:32:05.000Z auth-service INFO [http-nio-8080-exec-2] “Login success userId=111”
+2024-12-16T21:32:06.000Z payment-service DEBUG [PaymentWorker-1] “Subscription renewal check”
+2024-12-16T21:32:07.000Z user-db DEBUG [pid=409] transactionStarted txId=n7o8
+2024-12-16T21:32:08.000Z user-service INFO [thread=http-nio-8080-exec-3] “POST /api/user/updateProfile status=200”
+2024-12-16T21:32:09.000Z auth-service DEBUG [http-nio-8080-exec-4] “Validating token user=402”
+2024-12-16T21:32:10.000Z payment-service WARN [PaymentWorker-2] “Stripe gateway high latency”
+2024-12-16T21:32:11.000Z user-db INFO [pid=409] commit txId=n7o8 user=user@db
+2024-12-16T21:32:12.000Z user-service DEBUG [thread=http-nio-8080-exec-5] “Rendering user feed userId=999”
+2024-12-16T21:32:13.000Z auth-service INFO [http-nio-8080-exec-6] “Auth token extended userId=847”
+2024-12-16T21:32:14.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558069 gateway=PayPal”
+2024-12-16T21:32:15.000Z user-db DEBUG [pid=410] statement=“SELECT current_database()”
+2024-12-16T21:32:16.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/orders items=4”
+2024-12-16T21:32:17.000Z auth-service WARN [http-nio-8080-exec-1] “Auth DB read=710ms”
+2024-12-16T21:32:18.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558070”
+2024-12-16T21:32:19.000Z user-db INFO [pid=410] “Periodic cleanup triggered”
+2024-12-16T21:32:20.000Z user-service DEBUG [thread=http-nio-8080-exec-2] “User session refresh userId=111”
+2024-12-16T21:32:21.000Z auth-service INFO [http-nio-8080-exec-3] “Login success userId=999”
+2024-12-16T21:32:22.000Z payment-service WARN [PaymentWorker-1] “PayPal gateway backlog=300ms”
+2024-12-16T21:32:23.000Z user-db DEBUG [pid=411] transactionStarted txId=p9q0
+2024-12-16T21:32:24.000Z user-service INFO [thread=http-nio-8080-exec-4] “GET /api/user/dashboard time=188ms”
+2024-12-16T21:33:00.000Z auth-service DEBUG [http-nio-8080-exec-5] “Session validated user=847”
+2024-12-16T21:33:01.000Z payment-service INFO [PaymentWorker-2] “Processing queued payment orderId=558071”
+2024-12-16T21:33:02.000Z user-db INFO [pid=411] commit txId=p9q0 user=user@db
+2024-12-16T21:33:03.000Z user-service DEBUG [thread=http-nio-8080-exec-5] “GET /api/user/alerts userId=402”
+2024-12-16T21:33:04.000Z auth-service DEBUG [http-nio-8080-exec-6] “Extending token userId=111”
+2024-12-16T21:33:05.000Z payment-service WARN “Stripe gateway slow latency=380ms”
+2024-12-16T21:33:06.000Z user-db DEBUG [pid=412] statement=“SELECT count(*) FROM users”
+2024-12-16T21:33:07.000Z user-service INFO [thread=http-nio-8080-exec-7] “POST /api/user/updatePreferences status=200”
+2024-12-16T21:33:08.000Z auth-service INFO [http-nio-8080-exec-1] “Login success userId=402”
+2024-12-16T21:33:09.000Z payment-service DEBUG [PaymentWorker-1] “Refund processed orderId=558072”
+2024-12-16T21:33:10.000Z user-db INFO “Idle=55, Active=45”
+2024-12-16T21:33:11.000Z user-service DEBUG “Building user feed userId=999”
+2024-12-16T21:33:12.000Z auth-service WARN [http-nio-8080-exec-2] “Auth DB read took 750ms”
+2024-12-16T21:33:13.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558073 gateway=PayPal”
+2024-12-16T21:33:14.000Z user-db DEBUG [pid=413] transactionStarted txId=r1s2
+2024-12-16T21:33:15.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/history items=0”
+2024-12-16T21:33:16.000Z auth-service DEBUG [http-nio-8080-exec-4] “Session check userId=847”
+2024-12-16T21:33:17.000Z payment-service WARN [PaymentWorker-1] “PayPal gateway queue=2”
+2024-12-16T21:33:18.000Z user-db INFO [pid=413] commit txId=r1s2 user=user@db
+2024-12-16T21:33:19.000Z user-service DEBUG [thread=http-nio-8080-exec-6] “GET /api/user/dashboard userId=111”
+2024-12-16T21:33:20.000Z auth-service INFO [http-nio-8080-exec-5] “Token validated userId=999”
+2024-12-16T21:33:21.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558074”
+2024-12-16T21:33:22.000Z user-db DEBUG [pid=414] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:33:23.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/preferences time=120ms”
+2024-12-16T21:34:00.000Z auth-service DEBUG [http-nio-8080-exec-1] “Re-auth user=847”
+2024-12-16T21:34:01.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558075”
+2024-12-16T21:34:02.000Z user-db INFO “Idle=56, Active=44”
+2024-12-16T21:34:03.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “GET /api/user/cart userId=999”
+2024-12-16T21:34:04.000Z auth-service INFO [http-nio-8080-exec-2] “Login success userId=111”
+2024-12-16T21:34:05.000Z payment-service DEBUG [PaymentWorker-2] “Refund processed orderId=558076”
+2024-12-16T21:34:06.000Z user-db DEBUG [pid=415] transactionStarted txId=k1l2
+2024-12-16T21:34:07.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/orders items=3”
+2024-12-16T21:34:08.000Z auth-service DEBUG [http-nio-8080-exec-3] “Session validated userId=847”
+2024-12-16T21:34:09.000Z payment-service WARN “PayPal gateway queue=2”
+2024-12-16T21:34:10.000Z user-db INFO [pid=415] commit txId=k1l2 user=user@db
+2024-12-16T21:34:11.000Z user-service DEBUG “Loading user timeline userId=402”
+2024-12-16T21:34:12.000Z auth-service WARN [http-nio-8080-exec-4] “Auth DB read=670ms”
+2024-12-16T21:34:13.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558077 gateway=Stripe”
+2024-12-16T21:34:14.000Z user-db DEBUG [pid=416] statement=“ANALYZE”
+2024-12-16T21:34:15.000Z user-service INFO [thread=http-nio-8080-exec-5] “GET /api/user/dashboard time=92ms”
+2024-12-16T21:34:16.000Z auth-service DEBUG [http-nio-8080-exec-6] “Session verified userId=847”
+2024-12-16T21:34:17.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558078”
+2024-12-16T21:34:18.000Z user-db INFO [pid=416] “Periodic stats: active=44 idle=56”
+2024-12-16T21:34:19.000Z user-service DEBUG “Loading user summary userId=111”
+2024-12-16T21:34:20.000Z auth-service INFO [http-nio-8080-exec-1] “Auth token extended userId=402”
+2024-12-16T21:34:21.000Z payment-service WARN [PaymentWorker-1] “Payment gateway timeout=300ms”
+2024-12-16T21:34:22.000Z user-db DEBUG [pid=417] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:34:23.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/dashboard userId=999 status=200”
+2024-12-16T21:35:00.000Z auth-service DEBUG [http-nio-8080-exec-2] “Validating credentials user=111”
+2024-12-16T21:35:01.000Z payment-service INFO [PaymentWorker-2] “Processing payments in queue”
+2024-12-16T21:35:02.000Z user-db DEBUG [pid=417] “Vacuuming indexes”
+2024-12-16T21:35:03.000Z user-service INFO [thread=http-nio-8080-exec-4] “GET /api/user/cart items=0”
+2024-12-16T21:35:04.000Z auth-service DEBUG [http-nio-8080-exec-3] “Extending token userId=402”
+2024-12-16T21:35:05.000Z payment-service WARN “Stripe gateway partial slowdown”
+2024-12-16T21:35:06.000Z user-db INFO [pid=418] “Idle=55, Active=45”
+2024-12-16T21:35:07.000Z user-service DEBUG [thread=http-nio-8080-exec-5] “Updating user data userId=999”
+2024-12-16T21:35:08.000Z auth-service INFO [http-nio-8080-exec-6] “Auth token validated userId=847”
+2024-12-16T21:35:09.000Z payment-service DEBUG [PaymentWorker-1] “Subscription renewal”
+2024-12-16T21:35:10.000Z user-db DEBUG [pid=419] transactionStarted txId=m3n4
+2024-12-16T21:35:11.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/favorites status=200”
+2024-12-16T21:35:12.000Z auth-service WARN [http-nio-8080-exec-1] “DB read=695ms”
+2024-12-16T21:35:13.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558079 gateway=PayPal”
+2024-12-16T21:35:14.000Z user-db INFO [pid=419] commit txId=m3n4 user=user@db
+2024-12-16T21:35:15.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “User session refresh userId=111”
+2024-12-16T21:35:16.000Z auth-service INFO [http-nio-8080-exec-2] “Token extended userId=999”
+2024-12-16T21:35:17.000Z payment-service DEBUG [PaymentWorker-1] “Refund processed orderId=558080”
+2024-12-16T21:35:18.000Z user-db DEBUG [pid=420] statement=“SELECT 1”
+2024-12-16T21:35:19.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/dashboard time=144ms”
+2024-12-16T21:35:20.000Z auth-service DEBUG [http-nio-8080-exec-3] “Token verification user=111”
+2024-12-16T21:35:21.000Z payment-service WARN “PayPal gateway queue=2”
+2024-12-16T21:35:22.000Z user-db INFO [pid=420] “Periodic stats”
+2024-12-16T21:35:23.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “User feed rendering userId=402”
+2024-12-16T21:36:00.000Z auth-service INFO [http-nio-8080-exec-5] “Login success userId=111”
+2024-12-16T21:36:01.000Z payment-service DEBUG [PaymentWorker-2] “Queue check size=1”
+2024-12-16T21:36:02.000Z user-db DEBUG [pid=421] statement=“ANALYZE”
+2024-12-16T21:36:03.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/cart userId=999”
+2024-12-16T21:36:04.000Z auth-service DEBUG [http-nio-8080-exec-1] “Extending token userId=402”
+2024-12-16T21:36:05.000Z payment-service WARN [PaymentWorker-1] “Gateway response=350ms gateway=Stripe”
+2024-12-16T21:36:06.000Z user-db INFO [pid=421] “Idle=56, Active=44”
+2024-12-16T21:36:07.000Z user-service DEBUG “Building user feed userId=847”
+2024-12-16T21:36:08.000Z auth-service INFO [http-nio-8080-exec-2] “Auth token validated userId=999”
+2024-12-16T21:36:09.000Z payment-service DEBUG [PaymentWorker-2] “Refund processed orderId=558081”
+2024-12-16T21:36:10.000Z user-db DEBUG [pid=422] transactionStarted txId=o5p6
+2024-12-16T21:36:11.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/orders items=1”
+2024-12-16T21:36:12.000Z auth-service WARN [http-nio-8080-exec-4] “DB read slowness=702ms”
+2024-12-16T21:36:13.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558082 gateway=Stripe”
+2024-12-16T21:36:14.000Z user-db INFO [pid=422] commit txId=o5p6
+2024-12-16T21:36:15.000Z user-service DEBUG [thread=http-nio-8080-exec-5] “User session refresh userId=999”
+2024-12-16T21:36:16.000Z auth-service INFO [http-nio-8080-exec-6] “Login success userId=847”
+2024-12-16T21:36:17.000Z payment-service DEBUG [PaymentWorker-2] “Payment queued orderId=558083”
+2024-12-16T21:36:18.000Z user-db DEBUG [pid=423] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:36:19.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/alerts status=200”
+2024-12-16T21:36:20.000Z auth-service DEBUG [http-nio-8080-exec-1] “Validating session userId=402”
+2024-12-16T21:36:21.000Z payment-service INFO [PaymentWorker-1] “Refund processed orderId=558084”
+2024-12-16T21:36:22.000Z user-db INFO [pid=423] “Vacuuming temp tables”
+2024-12-16T21:36:23.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “Updating user session userId=111”
+2024-12-16T21:37:00.000Z auth-service WARN [http-nio-8080-exec-2] “DB read=680ms”
+2024-12-16T21:37:01.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558085 gateway=PayPal”
+2024-12-16T21:37:02.000Z user-db DEBUG [pid=424] transactionStarted txId=q7r8
+2024-12-16T21:37:03.000Z user-service DEBUG [thread=http-nio-8080-exec-2] “GET /api/user/orders userId=999”
+2024-12-16T21:37:04.000Z auth-service DEBUG [http-nio-8080-exec-3] “Token extended userId=402”
+2024-12-16T21:37:05.000Z payment-service WARN [PaymentWorker-1] “Gateway backlog=2 gateway=Stripe”
+2024-12-16T21:37:06.000Z user-db INFO [pid=424] commit txId=q7r8 user=user@db
+2024-12-16T21:37:07.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/dashboard status=200”
+2024-12-16T21:37:08.000Z auth-service WARN [http-nio-8080-exec-4] “DB read=680ms”
+2024-12-16T21:37:09.000Z payment-service DEBUG [PaymentWorker-2] “Refund processed orderId=558086”
+2024-12-16T21:37:10.000Z user-db DEBUG [pid=425] statement=“SELECT count(*) FROM orders”
+2024-12-16T21:37:11.000Z user-service DEBUG “User feed load userId=847”
+2024-12-16T21:37:12.000Z auth-service INFO [http-nio-8080-exec-5] “Login success userId=999”
+2024-12-16T21:37:13.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558087”
+2024-12-16T21:37:14.000Z user-db INFO [pid=425] “Idle=55, Active=45”
+2024-12-16T21:37:15.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “Updating user data userId=402”
+2024-12-16T21:37:16.000Z auth-service DEBUG [http-nio-8080-exec-6] “Token validated userId=847”
+2024-12-16T21:37:17.000Z payment-service WARN “Stripe gateway slow=340ms”
+2024-12-16T21:37:18.000Z user-db DEBUG [pid=426] transactionStarted txId=s9t0
+2024-12-16T21:37:19.000Z user-service INFO [thread=http-nio-8080-exec-5] “GET /api/user/cart items=4”
+2024-12-16T21:37:20.000Z auth-service INFO [http-nio-8080-exec-7] “Auth token extended userId=111”
+2024-12-16T21:37:21.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558088”
+2024-12-16T21:37:22.000Z user-db INFO [pid=426] commit txId=s9t0 user=user@db
+2024-12-16T21:37:23.000Z user-service DEBUG [thread=http-nio-8080-exec-6] “Rendering user notifications userId=999”
+2024-12-16T21:38:00.000Z auth-service DEBUG [http-nio-8080-exec-1] “Session check user=847”
+2024-12-16T21:38:01.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558089 gateway=Stripe”
+2024-12-16T21:38:02.000Z user-db DEBUG [pid=427] statement=“SELECT 1”
+2024-12-16T21:38:03.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/orders time=103ms”
+2024-12-16T21:38:04.000Z auth-service DEBUG [http-nio-8080-exec-2] “Session validated user=402”
+2024-12-16T21:38:05.000Z payment-service WARN “PayPal gateway queue=3”
+2024-12-16T21:38:06.000Z user-db INFO [pid=427] “Idle=56, Active=44”
+2024-12-16T21:38:07.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “POST /api/user/updateProfile status=200”
+2024-12-16T21:38:08.000Z auth-service INFO [http-nio-8080-exec-3] “Login success userId=111”
+2024-12-16T21:38:09.000Z payment-service DEBUG [PaymentWorker-2] “Refund processed orderId=558090”
+2024-12-16T21:38:10.000Z user-db DEBUG [pid=428] transactionStarted txId=w3x4
+2024-12-16T21:38:11.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/cart items=1”
+2024-12-16T21:38:12.000Z auth-service WARN [http-nio-8080-exec-4] “DB read=650ms”
+2024-12-16T21:38:13.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558091”
+2024-12-16T21:38:14.000Z user-db INFO [pid=428] commit txId=w3x4
+2024-12-16T21:38:15.000Z user-service DEBUG [thread=http-nio-8080-exec-3] “User data load userId=402”
+2024-12-16T21:38:16.000Z auth-service INFO [http-nio-8080-exec-5] “Auth token validated userId=999”
+2024-12-16T21:38:17.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558092”
+2024-12-16T21:38:18.000Z user-db DEBUG [pid=429] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:38:19.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/dashboard time=111ms”
+2024-12-16T21:38:20.000Z auth-service DEBUG [http-nio-8080-exec-7] “Re-auth user=402”
+2024-12-16T21:38:21.000Z payment-service WARN [PaymentWorker-1] “Stripe gateway partial slowdown”
+2024-12-16T21:38:22.000Z user-db INFO [pid=429] “Vacuuming indexes”
+2024-12-16T21:38:23.000Z user-service DEBUG [thread=http-nio-8080-exec-7] “Updating user session userId=111”
+2024-12-16T21:39:00.000Z auth-service INFO [http-nio-8080-exec-1] “Token extended userId=847”
+2024-12-16T21:39:01.000Z payment-service INFO [PaymentWorker-2] “Refund processed orderId=558093”
+2024-12-16T21:39:02.000Z user-db DEBUG [pid=430] transactionStarted txId=y5z6
+2024-12-16T21:39:03.000Z user-service INFO [thread=http-nio-8080-exec-1] “GET /api/user/activity userId=999”
+2024-12-16T21:39:04.000Z auth-service DEBUG [http-nio-8080-exec-2] “Token check userId=111”
+2024-12-16T21:39:05.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558094 gateway=PayPal”
+2024-12-16T21:39:06.000Z user-db INFO [pid=430] commit txId=y5z6 user=user@db
+2024-12-16T21:39:07.000Z user-service DEBUG [thread=http-nio-8080-exec-2] “User notifications load userId=402”
+2024-12-16T21:39:08.000Z auth-service INFO [http-nio-8080-exec-3] “Auth token extended userId=847”
+2024-12-16T21:39:09.000Z payment-service DEBUG [PaymentWorker-2] “Refund queued orderId=558095”
+2024-12-16T21:39:10.000Z user-db DEBUG [pid=431] statement=“ANALYZE”
+2024-12-16T21:39:11.000Z user-service INFO [thread=http-nio-8080-exec-3] “POST /api/user/updateProfile status=200”
+2024-12-16T21:39:12.000Z auth-service WARN [http-nio-8080-exec-4] “DB read=755ms”
+2024-12-16T21:39:13.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558096”
+2024-12-16T21:39:14.000Z user-db INFO [pid=431] “Idle=55, Active=45”
+2024-12-16T21:39:15.000Z user-service DEBUG [thread=http-nio-8080-exec-5] “GET /api/user/cart time=102ms”
+2024-12-16T21:39:16.000Z auth-service DEBUG [http-nio-8080-exec-6] “Validating session userId=999”
+2024-12-16T21:39:17.000Z payment-service WARN “Stripe gateway backlog=320ms”
+2024-12-16T21:39:18.000Z user-db DEBUG [pid=432] transactionStarted txId=a1b2
+2024-12-16T21:39:19.000Z user-service INFO [thread=http-nio-8080-exec-7] “GET /api/user/orders items=2”
+2024-12-16T21:39:20.000Z auth-service INFO [http-nio-8080-exec-1] “Token extended userId=402”
+2024-12-16T21:39:21.000Z payment-service DEBUG [PaymentWorker-2] “Refund processed orderId=558097”
+2024-12-16T21:39:22.000Z user-db INFO [pid=432] commit txId=a1b2
+2024-12-16T21:39:23.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “Loading user preferences userId=111”
+2024-12-16T21:40:00.000Z auth-service DEBUG [http-nio-8080-exec-2] “Session validated user=999”
+2024-12-16T21:40:01.000Z user-db INFO [pid=501] “Pool status normal: idle=55, active=45”
+2024-12-16T21:40:02.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “GET /api/user/alerts” userId=111 time=95ms
+2024-12-16T21:40:03.000Z auth-service INFO [http-nio-8080-exec-2] “Login success” userId=999 environment=production
+2024-12-16T21:40:04.000Z payment-service INFO [PaymentWorker-1] “Payment queue size=1 region=us-west-2”
+2024-12-16T21:40:05.000Z user-db DEBUG [pid=502] statement=“SELECT current_setting(‘max_connections’)”
+2024-12-16T21:40:06.000Z user-service INFO [thread=http-nio-8080-exec-2] “Completed request /api/user/orders in 122ms status=200”
+2024-12-16T21:40:07.000Z auth-service DEBUG [http-nio-8080-exec-3] “Token validated” userId=847
+2024-12-16T21:40:08.000Z payment-service DEBUG [PaymentWorker-2] “No pending refunds”
+2024-12-16T21:40:09.000Z user-db INFO [pid=503] “Idle=56, Active=44” pool=HikariPool-1
+2024-12-16T21:40:10.000Z user-service DEBUG “Fetching user notifications userId=999”
+2024-12-16T21:40:11.000Z auth-service WARN [http-nio-8080-exec-4] “Slow DB read time=670ms” userId=847
+2024-12-16T21:40:12.000Z payment-service INFO “Payment authorized orderId=558100 gateway=Stripe”
+2024-12-16T21:40:13.000Z user-db DEBUG [pid=504] transactionStarted txId=a1b2 environment=production
+2024-12-16T21:40:14.000Z user-service INFO [thread=http-nio-8080-exec-5] “GET /api/user/dashboard” userId=402 time=88ms
+2024-12-16T21:40:15.000Z auth-service INFO [http-nio-8080-exec-6] “Auth token extended” userId=999
+2024-12-16T21:40:16.000Z payment-service DEBUG [PaymentWorker-1] “Refund processed orderId=558101”
+2024-12-16T21:40:17.000Z user-db INFO [pid=504] commit txId=a1b2 user=user@user-db
+2024-12-16T21:40:18.000Z user-service DEBUG [thread=http-nio-8080-exec-7] “POST /api/user/updateProfile status=200”
+2024-12-16T21:40:19.000Z auth-service DEBUG [http-nio-8080-exec-1] “Session check userId=402”
+2024-12-16T21:40:20.000Z payment-service INFO [PaymentWorker-2] “Payment captured orderId=558102”
+2024-12-16T21:40:21.000Z user-db INFO [pid=505] “Periodic stats: idle=57, active=43”
+2024-12-16T21:40:22.000Z user-service DEBUG “User feed loading userId=111”
+2024-12-16T21:40:23.000Z auth-service WARN [http-nio-8080-exec-2] “Authentication DB slowness=730ms”
+2024-12-16T21:40:24.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558103 gateway=PayPal”
+2024-12-16T21:41:00.000Z user-db DEBUG [pid=506] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:41:01.000Z user-service INFO [thread=http-nio-8080-exec-3] “GET /api/user/activity” time=128ms userId=402
+2024-12-16T21:41:02.000Z auth-service INFO [http-nio-8080-exec-4] “Login success userId=999”
+2024-12-16T21:41:03.000Z payment-service DEBUG [PaymentWorker-2] “Scheduled payment check region=us-west-2”
+2024-12-16T21:41:04.000Z user-db INFO [pid=506] “Idle=56, Active=44” pool=HikariPool-1
+2024-12-16T21:41:05.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “GET /api/user/cart” items=3 userId=999
+2024-12-16T21:41:06.000Z auth-service DEBUG [http-nio-8080-exec-2] “Refreshing token silently” userId=847
+2024-12-16T21:41:07.000Z payment-service INFO “Payment refunded orderId=558104 userId=847 reason="Customer request"”
+2024-12-16T21:41:08.000Z user-db DEBUG [pid=507] transactionStarted txId=c3d4
+2024-12-16T21:41:09.000Z user-service INFO [thread=http-nio-8080-exec-2] “Completed request /api/user/orders in 150ms status=200”
+2024-12-16T21:41:10.000Z auth-service WARN [http-nio-8080-exec-3] “Token validation slow=690ms”
+2024-12-16T21:41:11.000Z payment-service DEBUG [PaymentWorker-1] “No pending refunds”
+2024-12-16T21:41:12.000Z user-db INFO [pid=507] commit txId=c3d4
+2024-12-16T21:41:13.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “User details loaded userId=847”
+2024-12-16T21:41:14.000Z auth-service INFO [http-nio-8080-exec-5] “Authentication success userId=111”
+2024-12-16T21:41:15.000Z payment-service DEBUG [PaymentWorker-2] “Auto-capture started orderId=558105”
+2024-12-16T21:41:16.000Z user-db DEBUG [pid=508] statement=“ANALYZE”
+2024-12-16T21:41:17.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/preferences userId=847”
+2024-12-16T21:41:18.000Z auth-service WARN [http-nio-8080-exec-7] “Auth DB read took 640ms”
+2024-12-16T21:41:19.000Z payment-service INFO “Payment authorized orderId=558106 gateway=Stripe”
+2024-12-16T21:41:20.000Z user-db INFO [pid=508] “Idle=55, Active=45”
+2024-12-16T21:41:21.000Z user-service DEBUG “Updating user session userId=999”
+2024-12-16T21:41:22.000Z auth-service DEBUG [http-nio-8080-exec-1] “Session validated userId=402”
+2024-12-16T21:41:23.000Z payment-service WARN [PaymentWorker-1] “Payment gateway queue=2 gateway=PayPal”
+2024-12-16T21:42:00.000Z user-db DEBUG [pid=509] transactionStarted txId=e5f6
+2024-12-16T21:42:01.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/dashboard time=133ms”
+2024-12-16T21:42:02.000Z auth-service DEBUG [http-nio-8080-exec-3] “Re-auth user=847”
+2024-12-16T21:42:03.000Z payment-service INFO [PaymentWorker-2] “Refund processed orderId=558107”
+2024-12-16T21:42:04.000Z user-db INFO [pid=509] commit txId=e5f6 user=user@user-db
+2024-12-16T21:42:05.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “Fetching user feed userId=111”
+2024-12-16T21:42:06.000Z auth-service INFO [http-nio-8080-exec-5] “Token extended userId=999”
+2024-12-16T21:42:07.000Z payment-service DEBUG [PaymentWorker-1] “Payment captured orderId=558108”
+2024-12-16T21:42:08.000Z user-db DEBUG [pid=510] statement=“SELECT count(*) FROM sessions WHERE active=true”
+2024-12-16T21:42:09.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/orders status=200” userId=402
+2024-12-16T21:42:10.000Z auth-service WARN [http-nio-8080-exec-7] “Session renew took=720ms”
+2024-12-16T21:42:11.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558109 gateway=Stripe”
+2024-12-16T21:42:12.000Z user-db INFO [pid=510] “Periodic cleanup environment=production”
+2024-12-16T21:42:13.000Z user-service DEBUG “User feed loaded userId=847”
+2024-12-16T21:42:14.000Z auth-service DEBUG [http-nio-8080-exec-1] “Validating token user=402”
+2024-12-16T21:42:15.000Z payment-service WARN [PaymentWorker-1] “Payment gateway delay=370ms gateway=PayPal”
+2024-12-16T21:42:16.000Z user-db DEBUG [pid=511] transactionStarted txId=g7h8
+2024-12-16T21:42:17.000Z user-service INFO [thread=http-nio-8080-exec-2] “POST /api/user/updatePreferences status=200”
+2024-12-16T21:42:18.000Z auth-service INFO [http-nio-8080-exec-3] “Login success userId=847”
+2024-12-16T21:42:19.000Z payment-service DEBUG [PaymentWorker-2] “Payment queue empty”
+2024-12-16T21:42:20.000Z user-db INFO [pid=511] commit txId=g7h8
+2024-12-16T21:42:21.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “User data refresh userId=999”
+2024-12-16T21:42:22.000Z auth-service WARN [http-nio-8080-exec-5] “DB read slowness=690ms”
+2024-12-16T21:42:23.000Z payment-service INFO [PaymentWorker-1] “Refund processed orderId=558110”
+2024-12-16T21:43:00.000Z user-db DEBUG [pid=512] statement=“SELECT pg_sleep(0.05)”
+2024-12-16T21:43:01.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/cart items=2”
+2024-12-16T21:43:02.000Z auth-service DEBUG [http-nio-8080-exec-7] “Session validated userId=999”
+2024-12-16T21:43:03.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558111 gateway=Stripe”
+2024-12-16T21:43:04.000Z user-db INFO [pid=512] “Idle=55, Active=45”
+2024-12-16T21:43:05.000Z user-service DEBUG [thread=http-nio-8080-exec-1] “Rendering user notifications userId=847”
+2024-12-16T21:43:06.000Z auth-service WARN [http-nio-8080-exec-2] “Auth token check=700ms”
+2024-12-16T21:43:07.000Z payment-service DEBUG [PaymentWorker-1] “Refund queued orderId=558112”
+2024-12-16T21:43:08.000Z user-db DEBUG [pid=513] transactionStarted txId=i9j0
+2024-12-16T21:43:09.000Z user-service INFO [thread=http-nio-8080-exec-2] “Completed request /api/user/orders in 102ms status=200”
+2024-12-16T21:43:10.000Z auth-service INFO [http-nio-8080-exec-3] “Login success userId=111”
+2024-12-16T21:43:11.000Z payment-service WARN [PaymentWorker-2] “Gateway backlog=3 gateway=PayPal”
+2024-12-16T21:43:12.000Z user-db INFO [pid=513] commit txId=i9j0 user=user@user-db
+2024-12-16T21:43:13.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “User session updated userId=402”
+2024-12-16T21:43:14.000Z auth-service DEBUG [http-nio-8080-exec-5] “Token extended userId=999”
+2024-12-16T21:43:15.000Z payment-service INFO [PaymentWorker-1] “Payment authorized orderId=558113 gateway=Stripe”
+2024-12-16T21:43:16.000Z user-db DEBUG [pid=514] statement=“ANALYZE”
+2024-12-16T21:43:17.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/dashboard time=200ms”
+2024-12-16T21:43:18.000Z auth-service WARN [http-nio-8080-exec-7] “DB read=715ms”
+2024-12-16T21:43:19.000Z payment-service DEBUG [PaymentWorker-2] “No pending refunds”
+2024-12-16T21:43:20.000Z user-db INFO [pid=514] “Idle=54, Active=46”
+2024-12-16T21:43:21.000Z user-service DEBUG “Loading user feed userId=847”
+2024-12-16T21:43:22.000Z auth-service DEBUG [http-nio-8080-exec-1] “Session re-check userId=847”
+2024-12-16T21:43:23.000Z payment-service INFO [PaymentWorker-1] “Payment captured orderId=558114”
+2024-12-16T21:44:00.000Z user-db DEBUG [pid=515] transactionStarted txId=j3k4
+2024-12-16T21:44:01.000Z user-service INFO [thread=http-nio-8080-exec-2] “GET /api/user/activity userId=402 time=135ms”
+2024-12-16T21:44:02.000Z auth-service DEBUG [http-nio-8080-exec-3] “Token validated userId=111”
+2024-12-16T21:44:03.000Z payment-service INFO [PaymentWorker-2] “Processing queued payment orderId=558115”
+2024-12-16T21:44:04.000Z user-db INFO [pid=515] commit txId=j3k4 environment=production
+2024-12-16T21:44:05.000Z user-service DEBUG [thread=http-nio-8080-exec-4] “GET /api/user/cart items=3”
+2024-12-16T21:44:06.000Z auth-service INFO [http-nio-8080-exec-5] “Login success userId=999”
+2024-12-16T21:44:07.000Z payment-service DEBUG [PaymentWorker-1] “Refund queued orderId=558116”
+2024-12-16T21:44:08.000Z user-db DEBUG [pid=516] statement=“SELECT 1”
+2024-12-16T21:44:09.000Z user-service INFO [thread=http-nio-8080-exec-6] “GET /api/user/orders status=200”
+2024-12-16T21:44:10.000Z auth-service WARN [http-nio-8080-exec-7] “Slow authentication check time=750ms”
+2024-12-16T21:44:11.000Z payment-service INFO [PaymentWorker-2] “Payment authorized orderId=558117 gateway=PayPal”
+2024-12-16T21:44:12.000Z user-db INFO [pid=516] “Idle=53, Active=47”
+2024-12-16T21:44:13.000Z user-service DEBUG “Rendering user notifications userId=847”
+2024-12-16T21:44:14.000Z auth-service INFO [http-nio-8080-exec-1] “Token check userId=402”
+2024-12-16T21:44:15.000Z payment-service DEBUG [PaymentWorker-1] “Refund processed orderId=558118”
+2024-12-16T21:44:16.000Z user-db DEBUG [pid=517] transactionStarted txId=l5m6
+2024-12-16T21:44:55.993Z user-service INFO [thread=http-nio-8080-exec-4] “GET /api/user/orders” userId=999 timeSpent=218ms status=200
+2024-12-16T21:44:59.120Z payment-service DEBUG [PaymentWorker-2] “Scheduled payment check” region=us-west-2
+2024-12-16T21:45:00.000Z user-db ERROR [pid=517] “FATAL: too many connections for role "user"” environment=production region=us-west-2
+2024-12-16T21:45:00.000Z user-db ERROR [pid=517] org.postgresql.util.PSQLException: FATAL: too many connections for role “user” at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:…)
+2024-12-16T21:45:00.001Z user-service ERROR [thread=http-nio-8080-exec-6] org.springframework.dao.DataAccessResourceFailureException: could not extract ResultSet; nested exception is org.hibernate.exception.JDBCConnectionException Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available
+2024-12-16T21:45:00.002Z auth-service WARN [http-nio-8080-exec-3] “Authentication failed: Connection pool exhausted for user”
+2024-12-16T21:45:00.003Z user-db INFO [pid=518] “Active connections=100, Idle=0 => Connection pool exhausted”
+2024-12-16T21:45:05.111Z payment-service ERROR c.e.p.s.PaymentService - Error processing payment orderId=999999: org.hibernate.exception.JDBCConnectionException: could not execute statement Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available
+2024-12-16T21:45:08.999Z user-service CRITICAL [thread=http-nio-8080-exec-7] “System meltdown? DB not responding” errorCount=5
+2024-12-16T21:45:09.203Z user-db ERROR [pid=519] “Connection to localhost:5432 refused” code=08001
+2024-12-16T21:45:10.223Z user-db ERROR [pid=519] “HikariPool-1 - Connection is not available, request timed out”
+2024-12-16T21:45:12.000Z auth-service ERROR { “time”:“2024-12-16T21:45:12.000Z”, “error”:“org.springframework.dao.DataAccessResourceFailureException”, “message”:“connection pool exhausted” }
+2024-12-16T21:45:14.556Z user-service ERROR [thread=http-nio-8080-exec-2] “Transaction rolled back due to connection timeout”
+2024-12-16T21:45:15.990Z payment-service WARN [PaymentWorker-1] “Payment delayed: Connection pool exhausted”
+2024-12-16T21:45:17.223Z user-db ERROR [pid=520] “FATAL: too many connections for role "user"”
+2024-12-16T21:45:17.224Z user-db DEBUG [pid=520] “New requests waiting in queue => wait_time=400ms”
+2024-12-16T21:45:20.667Z auth-service ERROR [http-nio-8080-exec-4] “Failed to acquire connection from HikariPool-1”
+2024-12-16T21:45:21.009Z user-service CRITICAL [thread=http-nio-8080-exec-6] “Database meltdown continues” userId=999
+2024-12-16T21:45:25.119Z user-db WARN [pid=521] “Long query times detected, possible connection starvation”
+2024-12-16T21:45:26.728Z payment-service ERROR c.e.p.s.PaymentService - Error executing payment. org.springframework.dao.DataAccessResourceFailureException: could not execute statement nested exception is org.hibernate.exception.JDBCConnectionException
+2024-12-16T21:45:28.445Z auth-service WARN “Authentication timing out” userId=111
+2024-12-16T21:45:30.223Z user-service ERROR [thread=http-nio-8080-exec-3] “Cannot perform updateProfile => Connection pool exhausted”
+2024-12-16T21:45:35.000Z user-db ERROR [pid=522] “HikariPool-1 - Connection is not available”
+2024-12-16T21:46:00.001Z payment-service WARN “Transaction rollback due to DB timeouts” orderId=558120
+2024-12-16T21:46:02.778Z user-service ERROR [thread=http-nio-8080-exec-5] org.springframework.dao.DataAccessResourceFailureException: could not extract ResultSet Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available
+2024-12-16T21:46:05.333Z auth-service ERROR “Auth DB meltdown - connections not available”
+2024-12-16T21:46:08.991Z user-db ERROR [pid=523] “FATAL: too many connections for role "user"”
+2024-12-16T21:46:09.002Z user-db DEBUG [pid=523] “Queue wait=700ms”
+2024-12-16T21:46:10.775Z payment-service WARN “Payment gateway see timeouts, DB is not responding”
+2024-12-16T21:46:15.114Z user-service CRITICAL “User-service meltdown: DB pool exhausted”
+2024-12-16T21:46:20.446Z auth-service WARN [http-nio-8080-exec-7] “Increasing error rate, 50% requests failing”
+2024-12-16T21:46:25.669Z user-db ERROR [pid=524] “Connection to localhost:5432 refused” code=08001
+2024-12-16T21:46:30.450Z payment-service ERROR “Error processing queued payment: pool exhausted”
+2024-12-16T21:46:35.000Z user-service CRITICAL “Severe latency: 25s+ wait for DB connection”
+2024-12-16T21:46:40.008Z auth-service WARN “Requests failing: Connection pool exhausted”
+2024-12-16T21:46:42.502Z user-db ERROR [pid=525] “HikariPool-1 - Connection is not available, request timed out”
+2024-12-16T21:46:50.115Z payment-service DEBUG “Deferred payments piling up”
+2024-12-16T21:46:55.778Z user-service ERROR “Operation timed out”
+2024-12-16T21:47:00.003Z auth-service ERROR “DB meltdown persists, continuing timeouts”
+2024-12-16T21:47:05.229Z user-db ERROR [pid=526] “FATAL: too many connections”
+2024-12-16T21:47:08.334Z payment-service WARN “Delaying payment attempts for 5s”
+2024-12-16T21:47:12.877Z user-service CRITICAL “No DB connections available”
+2024-12-16T21:47:15.557Z auth-service WARN “70% of requests failing authentication”
+2024-12-16T21:47:19.223Z user-db INFO [pid=527] “Idle=1, active=99 => near meltdown”
+2024-12-16T21:47:22.667Z payment-service ERROR c.e.p.s.PaymentService - Connection is not available, request timed out
+2024-12-16T21:47:25.884Z user-service ERROR “Transaction rolled back forcibly”
+2024-12-16T21:47:30.999Z auth-service ERROR “Failed login for userId=847 due to pool exhausted”
+2024-12-16T21:47:34.220Z user-db ERROR [pid=528] “Too many connections for role "user"”
+2024-12-16T21:47:38.660Z payment-service DEBUG “Queue length=10. All blocked.”
+2024-12-16T21:47:42.991Z user-service CRITICAL “Service meltdown intensifies”
+2024-12-16T21:47:45.400Z auth-service ERROR “Could not refresh token; no DB connections”
+2024-12-16T21:47:49.500Z user-db ERROR [pid=529] “HikariPool-1 - no idle connections remain”
+2024-12-16T21:47:52.225Z payment-service WARN “Payment retries exhausted”
+2024-12-16T21:47:57.333Z user-service ERROR “DB meltdown continues, errorCount=15”
+2024-12-16T21:48:00.000Z auth-service WARN “Authentication dropping requests”
+2024-12-16T21:48:05.112Z user-db ERROR [pid=530] “Connection to localhost:5432 refused” code=08001
+2024-12-16T21:48:08.776Z payment-service ERROR “Error executing statement, DB unreachable”
+2024-12-16T21:48:12.003Z user-service CRITICAL “System meltdown? Possibly indefinite downtime”
+2024-12-16T21:48:15.112Z auth-service ERROR “Connection pool is exhausted”
+2024-12-16T21:48:18.558Z user-db WARN “Stuck connections, query times 10s+”
+2024-12-16T21:48:22.887Z payment-service WARN “Transaction rollback”
+2024-12-16T21:48:25.007Z user-service ERROR “Timeout retrieving user data”
+2024-12-16T21:48:30.000Z auth-service WARN “Authentication meltdown continues”
+2024-12-16T21:48:34.444Z user-db ERROR [pid=531] “FATAL: role "user" has 0 idle connections”
+2024-12-16T21:48:39.221Z payment-service DEBUG “Queue length=15, blocking”
+2024-12-16T21:48:42.998Z user-service CRITICAL “Cannot proceed with any DB operation”
+2024-12-16T21:48:47.334Z auth-service ERROR “Token generation failed”
+2024-12-16T21:48:50.889Z user-db ERROR [pid=532] “HikariPool-1 request timed out”
+2024-12-16T21:48:55.001Z payment-service WARN “Multiple payments stuck in queue”
+2024-12-16T21:48:58.776Z user-service ERROR “Severe meltdown, DB remains blocked”
+2024-12-16T21:49:00.228Z auth-service WARN “Login rate dropping, 80% requests fail”
+2024-12-16T21:49:04.556Z user-db ERROR [pid=533] “FATAL: too many connections for role "user"”
+2024-12-16T21:49:07.778Z payment-service ERROR “Connection is not available, request timed out”
+2024-12-16T21:49:12.404Z user-service CRITICAL “Operations fully blocked”
+2024-12-16T21:49:15.012Z auth-service ERROR “Auth meltdown, no DB handle”
+2024-12-16T21:49:19.778Z user-db ERROR [pid=534] “HikariPool-1 - zero idle”
+2024-12-16T21:49:23.445Z payment-service DEBUG “Payment system in partial shutdown”
+2024-12-16T21:49:26.888Z user-service ERROR “Request forcibly terminated”
+2024-12-16T21:49:30.120Z auth-service WARN “Authentication requests failing >=70%”
+2024-12-16T21:49:33.667Z user-db WARN “Might need manual pool reset”
+2024-12-16T21:49:35.999Z payment-service ERROR “Payment finalizing timed out”
+2024-12-16T21:49:40.550Z user-service CRITICAL “Max error threshold near”
+2024-12-16T21:49:44.110Z auth-service ERROR “Pool exhaustion persists”
+2024-12-16T21:49:47.398Z user-db ERROR [pid=535] “Active=100, idle=0 => meltdown”
+2024-12-16T21:49:50.777Z payment-service WARN “Payment operations paused”
+2024-12-16T21:49:55.000Z user-service ERROR “Incident not resolving, meltdown continues”
+2024-12-16T21:49:59.002Z auth-service WARN “Service disruption ongoing”
+2024-12-16T21:50:00.000Z user-db INFO [pid=536] “Attempting partial recovery environment=production”
+2024-12-16T21:50:01.000Z user-db ERROR [pid=31612] “HikariPool-1 - Connection is not available”
+2024-12-16T21:50:01.500Z user-service CRITICAL [thread=http-nio-8080-exec-1] “High latency detected: waiting 30s+ for DB connections” requestId=fs6d33
+2024-12-16T21:50:02.000Z auth-service ERROR { “timestamp”:“2024-12-16T21:50:02.000Z”, “error”:“Connection pool exhausted”, “thread”:“http-nio-8080-exec-5” }
+2024-12-16T21:50:02.400Z payment-service WARN “Transaction rollback due to timeouts” orderId=557901
+2024-12-16T21:50:03.000Z user-db INFO [pid=31613] “Active=100, idle=0 => meltdown persists”
+2024-12-16T21:50:03.500Z user-service ERROR “Operation timed out retrieving user data userId=999”
+2024-12-16T21:50:04.000Z auth-service WARN “70% of authentication requests failing”
+2024-12-16T21:50:04.500Z payment-service ERROR c.e.p.s.PaymentService - Could not execute payment: org.hibernate.exception.JDBCConnectionException: could not execute statement
+2024-12-16T21:50:05.000Z user-db ERROR [pid=31614] “FATAL: too many connections for role "user"”
+2024-12-16T21:50:05.500Z user-db DEBUG [pid=31614] “Queue waiting=850ms”
+2024-12-16T21:50:06.000Z user-service CRITICAL [thread=http-nio-8080-exec-4] “DB meltdown continues, errorCount=12”
+2024-12-16T21:50:06.300Z auth-service ERROR “Auth flow broken: no available connections”
+2024-12-16T21:50:06.700Z payment-service WARN [PaymentWorker-1] “Payment queue backlog=6”
+2024-12-16T21:50:07.000Z user-db ERROR [pid=31615] “HikariPool-1 request timed out”
+2024-12-16T21:50:07.700Z user-service ERROR [thread=http-nio-8080-exec-2] “Transaction forcibly rolled back”
+2024-12-16T21:50:08.000Z auth-service WARN “User logins partially blocked: connection exhaustion”
+2024-12-16T21:50:08.500Z payment-service ERROR “Error finalizing payment: HikariPool-1 not available”
+2024-12-16T21:50:09.000Z user-db ERROR [pid=31616] “Connection to localhost:5432 refused” code=08001
+2024-12-16T21:50:09.500Z user-service CRITICAL [thread=http-nio-8080-exec-5] “System meltdown intensifies”
+2024-12-16T21:50:10.000Z auth-service ERROR “Failed token refresh for userId=847”
+2024-12-16T21:50:10.600Z payment-service WARN “Payment retries exhausted”
+2024-12-16T21:50:11.000Z user-db ERROR [pid=31617] “FATAL: too many connections for role "user"”
+2024-12-16T21:50:11.500Z user-db DEBUG [pid=31617] “Pool is fully saturated”
+2024-12-16T21:50:12.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Cannot perform updateProfile => DB meltdown”
+2024-12-16T21:50:13.000Z auth-service WARN [thread=http-nio-8080-exec-3] “Auth meltdown, user=999”
+2024-12-16T21:50:14.000Z payment-service ERROR c.e.p.s.PaymentService - Could not execute statement; nested exception is org.hibernate.exception.JDBCConnectionException
+2024-12-16T21:50:15.000Z user-db ERROR [pid=31618] “HikariPool-1 - no idle connections”
+2024-12-16T21:50:16.000Z user-service CRITICAL “Database meltdown persists”
+2024-12-16T21:50:17.000Z auth-service ERROR “Connection pool is exhausted, userId=402”
+2024-12-16T21:50:18.000Z payment-service WARN [PaymentWorker-1] “Transaction rollback forced”
+2024-12-16T21:50:19.000Z user-db WARN [pid=31619] “Long-running queries detected, possible starvation”
+2024-12-16T21:50:20.000Z user-service ERROR [thread=http-nio-8080-exec-4] “Operation timed out, no DB handle”
+2024-12-16T21:50:21.000Z auth-service WARN “Login attempts failing 70% rate”
+2024-12-16T21:50:22.000Z payment-service ERROR “Payment queue grows, DB meltdown”
+2024-12-16T21:50:23.000Z user-db ERROR [pid=31620] “FATAL: too many connections for role "user"”
+2024-12-16T21:50:24.000Z user-db DEBUG [pid=31620] “New requests waiting => wait_time=900ms”
+2024-12-16T21:50:25.000Z user-service CRITICAL [thread=http-nio-8080-exec-2] “User-service meltdown deepens”
+2024-12-16T21:50:26.000Z auth-service ERROR “DB meltdown, token generation failed”
+2024-12-16T21:50:27.000Z payment-service WARN “No DB connections, payment failure”
+2024-12-16T21:50:28.000Z user-db ERROR [pid=31621] “HikariPool-1 request timed out again”
+2024-12-16T21:50:29.000Z user-service ERROR “Request forcibly terminated, userId=111”
+2024-12-16T21:50:30.000Z auth-service WARN “Authentication meltdown unrelenting”
+2024-12-16T21:50:31.000Z payment-service ERROR “Could not process subscription renewal”
+2024-12-16T21:50:32.000Z user-db ERROR [pid=31622] “Connection to localhost:5432 refused”
+2024-12-16T21:50:33.000Z user-service CRITICAL [thread=http-nio-8080-exec-5] “Max error threshold nearing”
+2024-12-16T21:50:34.000Z auth-service ERROR “Pool exhausted for user=847”
+2024-12-16T21:50:35.000Z payment-service WARN “Backoff: delaying further attempts”
+2024-12-16T21:50:36.000Z user-db ERROR [pid=31623] “FATAL: too many connections for role "user"”
+2024-12-16T21:50:37.000Z user-db DEBUG [pid=31623] “Queue wait=1200ms”
+2024-12-16T21:50:38.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Transaction rolled back due to meltdown”
+2024-12-16T21:50:39.000Z auth-service WARN “User sessions failing to load”
+2024-12-16T21:50:40.000Z payment-service ERROR c.e.p.s.PaymentService - Payment gateway forced error
+2024-12-16T21:50:41.000Z user-db ERROR [pid=31624] “HikariPool-1 timed out”
+2024-12-16T21:50:42.000Z user-service CRITICAL “Cannot proceed, meltdown ongoing”
+2024-12-16T21:50:43.000Z auth-service ERROR “Failed to authenticate user=999”
+2024-12-16T21:50:44.000Z payment-service WARN “Payment queue=10, all blocked”
+2024-12-16T21:50:45.000Z user-db WARN “Starvation event: queries >10s”
+2024-12-16T21:50:46.000Z user-service ERROR [thread=http-nio-8080-exec-2] “DB meltdown, request timed out”
+2024-12-16T21:50:47.000Z auth-service WARN “Over 70% request failure”
+2024-12-16T21:50:48.000Z payment-service ERROR “Operation could not be completed”
+2024-12-16T21:50:49.000Z user-db ERROR [pid=31625] “FATAL: too many connections”
+2024-12-16T21:50:50.000Z user-service CRITICAL “User-service meltdown: no recovery yet”
+2024-12-16T21:50:51.000Z auth-service ERROR “Auth meltdown: DB unreachable”
+2024-12-16T21:50:52.000Z payment-service WARN “Payments stuck, meltdown continues”
+2024-12-16T21:50:53.000Z user-db ERROR [pid=31626] “HikariPool-1 - zero idle”
+2024-12-16T21:50:54.000Z user-service ERROR [thread=http-nio-8080-exec-4] “Severe meltdown: 90%+ requests failing”
+2024-12-16T21:50:55.000Z auth-service WARN “Authentication meltdown unstoppable”
+2024-12-16T21:50:56.000Z payment-service ERROR “Batch processing canceled”
+2024-12-16T21:50:57.000Z user-db DEBUG [pid=31627] “Attempting partial recovery, idle=2, active=98”
+2024-12-16T21:50:58.000Z user-service CRITICAL “Operations fully blocked, meltdown remains”
+2024-12-16T21:50:59.000Z auth-service ERROR “Token refresh failure: no connections”
+2024-12-16T21:51:00.000Z payment-service WARN “Delaying further operations by 10s”
+2024-12-16T21:51:01.000Z user-db ERROR [pid=31628] “Reconnection attempt failed, too many connections”
+2024-12-16T21:51:02.000Z user-service ERROR “Request forcibly terminated for user=847”
+2024-12-16T21:51:03.000Z auth-service WARN “Login attempts auto-retrying”
+2024-12-16T21:51:04.000Z payment-service ERROR c.e.p.s.PaymentService - Payment timed out, pool exhausted
+2024-12-16T21:51:05.000Z user-db ERROR [pid=31629] “HikariPool-1 - no idle left”
+2024-12-16T21:51:06.000Z user-service CRITICAL [thread=http-nio-8080-exec-1] “Still meltdown: DB is locked”
+2024-12-16T21:51:07.000Z auth-service ERROR “Auth attempt failed userId=999”
+2024-12-16T21:51:08.000Z payment-service WARN “Could not finalize payment”
+2024-12-16T21:51:09.000Z user-db WARN [pid=31630] “Excessive backlog, queries blocked”
+2024-12-16T21:51:10.000Z user-service ERROR “Profile update canceled userId=111”
+2024-12-16T21:51:11.000Z auth-service WARN “User session not retrieved”
+2024-12-16T21:51:12.000Z payment-service ERROR [PaymentWorker-2] “Deferred queue=12”
+2024-12-16T21:51:13.000Z user-db ERROR [pid=31631] “FATAL: too many connections for role "user"”
+2024-12-16T21:51:14.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:51:15.000Z auth-service ERROR “DB meltdown, 80%+ requests failing”
+2024-12-16T21:51:16.000Z payment-service WARN “Holding payments, meltdown not resolved”
+2024-12-16T21:51:17.000Z user-db DEBUG [pid=31632] “Attempt partial reset => idle=3, active=97”
+2024-12-16T21:51:18.000Z user-service ERROR “Operation forcibly timed out userId=402”
+2024-12-16T21:51:19.000Z auth-service WARN “Auth meltdown remains critical”
+2024-12-16T21:51:20.000Z payment-service ERROR “Payment not executed”
+2024-12-16T21:51:21.000Z user-db ERROR [pid=31633] “HikariPool-1 request timed out”
+2024-12-16T21:51:22.000Z user-service CRITICAL “No improvement, meltdown stable”
+2024-12-16T21:51:23.000Z auth-service ERROR “Token generation blocked, meltdown”
+2024-12-16T21:51:24.000Z payment-service WARN “Queue remains large => meltdown”
+2024-12-16T21:51:25.000Z user-db ERROR [pid=31634] “Connection to localhost:5432 refused”
+2024-12-16T21:51:26.000Z user-db DEBUG [pid=31634] “Queue wait=1300ms”
+2024-12-16T21:51:27.000Z user-service ERROR “Transaction canceled userId=847”
+2024-12-16T21:51:28.000Z auth-service WARN [http-nio-8080-exec-2] “Cannot authenticate, meltdown ongoing”
+2024-12-16T21:51:29.000Z payment-service ERROR c.e.p.s.PaymentService - Payment final step failed
+2024-12-16T21:51:30.000Z user-db ERROR [pid=31635] “FATAL: too many connections”
+2024-12-16T21:51:31.000Z user-service CRITICAL [thread=http-nio-8080-exec-5] “Major meltdown, user-service nonfunctional”
+2024-12-16T21:51:32.000Z auth-service ERROR “Failed DB read user=402”
+2024-12-16T21:51:33.000Z payment-service WARN “Retrying in 15s”
+2024-12-16T21:51:34.000Z user-db ERROR [pid=31636] “HikariPool-1 still exhausted”
+2024-12-16T21:51:35.000Z user-service ERROR [thread=http-nio-8080-exec-7] “No connections available”
+2024-12-16T21:51:36.000Z auth-service WARN “70% request error rate, meltdown unstoppable”
+2024-12-16T21:51:37.000Z payment-service ERROR “Refund operation timed out”
+2024-12-16T21:51:38.000Z user-db WARN [pid=31637] “Queries starved, meltdown”
+2024-12-16T21:51:39.000Z user-service CRITICAL [thread=http-nio-8080-exec-3] “All requests blocked, meltdown”
+2024-12-16T21:51:40.000Z auth-service ERROR “Auth meltdown at 80% failure rate”
+2024-12-16T21:51:41.000Z payment-service WARN “Payment backlog=18”
+2024-12-16T21:51:42.000Z user-db ERROR [pid=31638] “FATAL: too many connections for role "user"”
+2024-12-16T21:51:43.000Z user-db DEBUG [pid=31638] “Queue wait=1600ms”
+2024-12-16T21:51:44.000Z user-service ERROR “Request forcibly terminated userId=999”
+2024-12-16T21:51:45.000Z auth-service WARN “Cannot verify token, meltdown”
+2024-12-16T21:51:46.000Z payment-service ERROR c.e.p.s.PaymentService - Statement fail, DB meltdown
+2024-12-16T21:51:47.000Z user-db ERROR [pid=31639] “HikariPool-1 - no idle, meltdown”
+2024-12-16T21:51:48.000Z user-service CRITICAL “User-service meltdown persists, errorCount=25”
+2024-12-16T21:51:49.000Z auth-service ERROR “DB meltdown continues”
+2024-12-16T21:51:50.000Z payment-service WARN [PaymentWorker-2] “No progress, meltdown”
+2024-12-16T21:51:51.000Z user-db ERROR [pid=31640] “FATAL: role "user" at max connections”
+2024-12-16T21:51:52.000Z user-service ERROR [thread=http-nio-8080-exec-1] “Operation timed out userId=847”
+2024-12-16T21:51:53.000Z auth-service WARN [thread=http-nio-8080-exec-6] “High failure rate, meltdown unstoppable”
+2024-12-16T21:51:54.000Z payment-service ERROR “Refund attempt forcibly ended”
+2024-12-16T21:51:55.000Z user-db DEBUG [pid=31641] “Partial reset => idle=4, active=96”
+2024-12-16T21:51:56.000Z user-service CRITICAL “System meltdown not resolved”
+2024-12-16T21:51:57.000Z auth-service ERROR “Cannot authenticate user=402”
+2024-12-16T21:51:58.000Z payment-service WARN “Payment queue=20”
+2024-12-16T21:51:59.000Z user-db ERROR [pid=31642] “Request timed out”
+2024-12-16T21:52:00.000Z user-service ERROR “Exhausted DB connections remain”
+2024-12-16T21:52:01.000Z auth-service WARN “Auth meltdown no improvement”
+2024-12-16T21:52:02.000Z payment-service ERROR c.e.p.s.PaymentService - Payment gateway blocked
+2024-12-16T21:52:03.000Z user-db ERROR [pid=31643] “FATAL: too many connections for role "user"”
+2024-12-16T21:52:04.000Z user-db DEBUG [pid=31643] “Queue wait=1900ms”
+2024-12-16T21:52:05.000Z user-service CRITICAL “User-service meltdown extended”
+2024-12-16T21:52:06.000Z auth-service ERROR “No available connections, meltdown persists”
+2024-12-16T21:52:07.000Z payment-service WARN “Payment stuck, meltdown indefinite”
+2024-12-16T21:52:08.000Z user-db ERROR [pid=31644] “HikariPool-1 - no idle connections”
+2024-12-16T21:52:09.000Z user-service ERROR “Request forcibly canceled userId=111”
+2024-12-16T21:52:10.000Z auth-service WARN “High concurrency meltdown”
+2024-12-16T21:52:11.000Z payment-service ERROR “Payment job forcibly terminated”
+2024-12-16T21:52:12.000Z user-db WARN “Queries pending 12s or more”
+2024-12-16T21:52:13.000Z user-service CRITICAL [thread=http-nio-8080-exec-2] “No DB handle, meltdown not fixed”
+2024-12-16T21:52:14.000Z auth-service ERROR “Auth meltdown unstoppable”
+2024-12-16T21:52:15.000Z payment-service WARN “Queue backlog=22”
+2024-12-16T21:52:16.000Z user-db ERROR [pid=31645] “FATAL: role "user" over max connections”
+2024-12-16T21:52:17.000Z user-service DEBUG “Partial meltdown logs: userService inoperable”
+2024-12-16T21:52:18.000Z auth-service WARN [thread=http-nio-8080-exec-5] “Cannot load user sessions”
+2024-12-16T21:52:19.000Z payment-service ERROR “Payment final step: DB meltdown”
+2024-12-16T21:52:20.000Z user-db DEBUG [pid=31646] “Idle=5, active=95 => partial attempts”
+2024-12-16T21:52:21.000Z user-service CRITICAL “No relief from meltdown”
+2024-12-16T21:52:22.000Z auth-service ERROR “Token check denied, meltdown”
+2024-12-16T21:52:23.000Z payment-service WARN [PaymentWorker-1] “Operation aborted”
+2024-12-16T21:52:24.000Z user-db ERROR [pid=31647] “Connection request timed out”
+2024-12-16T21:52:25.000Z user-service ERROR “Transaction forcibly ended”
+2024-12-16T21:52:26.000Z auth-service WARN “75% fail rate, meltdown”
+2024-12-16T21:52:27.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown ongoing
+2024-12-16T21:52:28.000Z user-db ERROR [pid=31648] “FATAL: too many connections for role "user"”
+2024-12-16T21:52:29.000Z user-db DEBUG [pid=31648] “Queue wait=2100ms”
+2024-12-16T21:52:30.000Z user-service CRITICAL “User-service meltdown, no fix in sight”
+2024-12-16T21:52:31.000Z auth-service ERROR “No connections for user=847”
+2024-12-16T21:52:32.000Z payment-service WARN “Pending 25 payments, meltdown”
+2024-12-16T21:52:33.000Z user-db ERROR [pid=31649] “HikariPool-1 remains exhausted”
+2024-12-16T21:52:34.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Profile update canceled userId=402”
+2024-12-16T21:52:35.000Z auth-service WARN “Auth meltdown 80% fails”
+2024-12-16T21:52:36.000Z payment-service ERROR “Could not process refund”
+2024-12-16T21:52:37.000Z user-db WARN “Queries waiting 15s”
+2024-12-16T21:52:38.000Z user-service CRITICAL “DB meltdown, no remedy”
+2024-12-16T21:52:39.000Z auth-service ERROR “Token generation blocked by meltdown”
+2024-12-16T21:52:40.000Z payment-service WARN “Backoff 20s => meltdown”
+2024-12-16T21:52:41.000Z user-db DEBUG [pid=31650] “idle=6, active=94 => partial recovery attempt”
+2024-12-16T21:52:42.000Z user-service ERROR “Timeout retrieving user details”
+2024-12-16T21:52:43.000Z auth-service WARN “Auth meltdown remains unstoppable”
+2024-12-16T21:52:44.000Z payment-service ERROR “Payment capture aborted”
+2024-12-16T21:52:45.000Z user-db ERROR [pid=31651] “FATAL: too many connections”
+2024-12-16T21:52:46.000Z user-service CRITICAL “System meltdown unstoppable”
+2024-12-16T21:52:47.000Z auth-service ERROR [http-nio-8080-exec-7] “DB meltdown, token refresh denied”
+2024-12-16T21:52:48.000Z payment-service WARN [PaymentWorker-2] “Request queue=28”
+2024-12-16T21:52:49.000Z user-db ERROR [pid=31652] “Request timed out again”
+2024-12-16T21:52:50.000Z user-service ERROR “Could not finalize user operation userId=111”
+2024-12-16T21:52:51.000Z auth-service WARN “High concurrency meltdown”
+2024-12-16T21:52:52.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:52:53.000Z user-db ERROR [pid=31653] “HikariPool-1 no idle, meltdown”
+2024-12-16T21:52:54.000Z user-service CRITICAL “User-service meltdown: 90%+ fails”
+2024-12-16T21:52:55.000Z auth-service ERROR “Still no connections available”
+2024-12-16T21:52:56.000Z payment-service WARN “Payment queue=30, meltdown intensifies”
+2024-12-16T21:52:57.000Z user-db DEBUG [pid=31654] “Trying partial reset => idle=7, active=93”
+2024-12-16T21:52:58.000Z user-service ERROR “Operation forcibly timed out userId=999”
+2024-12-16T21:52:59.000Z auth-service WARN “Auth meltdown, 85% fails”
+2024-12-16T21:53:00.000Z payment-service ERROR “Payment not executed, meltdown”
+2024-12-16T21:53:01.000Z user-db ERROR [pid=31655] “FATAL: role "user" still maxed out”
+2024-12-16T21:53:02.000Z user-db DEBUG [pid=31655] “Queue wait=2200ms”
+2024-12-16T21:53:03.000Z user-service CRITICAL “No improvement in meltdown”
+2024-12-16T21:53:04.000Z auth-service ERROR “Cannot retrieve user sessions”
+2024-12-16T21:53:05.000Z payment-service WARN [PaymentWorker-1] “Payments deferred”
+2024-12-16T21:53:06.000Z user-db ERROR [pid=31656] “HikariPool-1 - no idle connections left”
+2024-12-16T21:53:07.000Z user-service ERROR [thread=http-nio-8080-exec-1] “Profile update forcibly aborted”
+2024-12-16T21:53:08.000Z auth-service WARN “Authentication meltdown stands”
+2024-12-16T21:53:09.000Z payment-service ERROR “Operation could not be completed”
+2024-12-16T21:53:10.000Z user-db WARN [pid=31657] “Stuck queries, meltdown”
+2024-12-16T21:53:11.000Z user-service CRITICAL “DB meltdown unstoppable”
+2024-12-16T21:53:12.000Z auth-service ERROR “Token generation blocked”
+2024-12-16T21:53:13.000Z payment-service WARN “Queue=35, meltdown continues”
+2024-12-16T21:53:14.000Z user-db DEBUG [pid=31658] “Idle=8, active=92 => partial fix attempt”
+2024-12-16T21:53:15.000Z user-service ERROR [thread=http-nio-8080-exec-5] “User operation timed out userId=111”
+2024-12-16T21:53:16.000Z auth-service WARN “Auth meltdown at 85% failure rate”
+2024-12-16T21:53:17.000Z payment-service ERROR “Payment step forcibly terminated”
+2024-12-16T21:53:18.000Z user-db ERROR [pid=31659] “HikariPool-1 timed out again”
+2024-12-16T21:53:19.000Z user-service CRITICAL “No stable DB connections”
+2024-12-16T21:53:20.000Z auth-service ERROR “Failed to validate user=402”
+2024-12-16T21:53:21.000Z payment-service WARN “Backoff extended meltdown”
+2024-12-16T21:53:22.000Z user-db ERROR [pid=31660] “Connection to localhost:5432 refused”
+2024-12-16T21:53:23.000Z user-service CRITICAL [thread=http-nio-8080-exec-7] “Max error limit near”
+2024-12-16T21:53:24.000Z auth-service ERROR “Pool meltdown remains”
+2024-12-16T21:53:25.000Z payment-service WARN “Payment retries suspended”
+2024-12-16T21:53:26.000Z user-db ERROR [pid=31661] “FATAL: too many connections for role "user"”
+2024-12-16T21:53:27.000Z user-db DEBUG [pid=31661] “Queue wait=2400ms”
+2024-12-16T21:53:28.000Z user-service ERROR “Transaction forcibly rolled back userId=847”
+2024-12-16T21:53:29.000Z auth-service WARN “Cannot proceed, meltdown unstoppable”
+2024-12-16T21:53:30.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:53:31.000Z user-db ERROR [pid=31662] “HikariPool-1 empty idle”
+2024-12-16T21:53:32.000Z user-service CRITICAL [thread=http-nio-8080-exec-2] “Still meltdown, DB locked”
+2024-12-16T21:53:33.000Z auth-service ERROR “DB meltdown, cannot authenticate user=999”
+2024-12-16T21:53:34.000Z payment-service WARN [PaymentWorker-1] “Queue=40, meltdown”
+2024-12-16T21:53:35.000Z user-db WARN “Starving queries: meltdown”
+2024-12-16T21:53:36.000Z user-service ERROR “Request forcibly timed out userId=402”
+2024-12-16T21:53:37.000Z auth-service WARN “Auth meltdown, 90% fail”
+2024-12-16T21:53:38.000Z payment-service ERROR “Operation canceled by meltdown”
+2024-12-16T21:53:39.000Z user-db DEBUG [pid=31663] “Idle=9, active=91 => partial recovery”
+2024-12-16T21:53:40.000Z user-service CRITICAL “No sign of improvement, meltdown ongoing”
+2024-12-16T21:53:41.000Z auth-service ERROR “Token generation impossible”
+2024-12-16T21:53:42.000Z payment-service WARN “Payment meltdown indefinite”
+2024-12-16T21:53:43.000Z user-db ERROR [pid=31664] “FATAL: too many connections”
+2024-12-16T21:53:44.000Z user-service ERROR “Operation forcibly timed out userId=111”
+2024-12-16T21:53:45.000Z auth-service WARN “Auth meltdown at 90% failures”
+2024-12-16T21:53:46.000Z payment-service ERROR “Refund attempt blocked by meltdown”
+2024-12-16T21:53:47.000Z user-db ERROR [pid=31665] “HikariPool-1 request timed out”
+2024-12-16T21:53:48.000Z user-service CRITICAL “User-service meltdown unrelenting”
+2024-12-16T21:53:49.000Z auth-service ERROR “Failed to load credentials user=847”
+2024-12-16T21:53:50.000Z payment-service WARN “Payment backlog=45”
+2024-12-16T21:53:51.000Z user-db DEBUG [pid=31666] “Idle=10, active=90 => partial attempt”
+2024-12-16T21:53:52.000Z user-service ERROR “Transaction forcibly rolled back userId=999”
+2024-12-16T21:53:53.000Z auth-service WARN [thread=http-nio-8080-exec-6] “Cannot refresh token meltdown”
+2024-12-16T21:53:54.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown persists
+2024-12-16T21:53:55.000Z user-db ERROR [pid=31667] “Connection to localhost:5432 refused”
+2024-12-16T21:53:56.000Z user-db DEBUG [pid=31667] “Queue wait=2600ms”
+2024-12-16T21:53:57.000Z user-service CRITICAL “Max error threshold near, meltdown unstoppable”
+2024-12-16T21:53:58.000Z auth-service ERROR “Auth meltdown 92% fails”
+2024-12-16T21:53:59.000Z payment-service WARN [PaymentWorker-2] “Deferred queue=46”
+2024-12-16T21:54:00.000Z user-db ERROR [pid=31668] “FATAL: too many connections”
+2024-12-16T21:54:01.000Z user-service ERROR [thread=http-nio-8080-exec-4] “No DB connections, meltdown”
+2024-12-16T21:54:02.000Z auth-service WARN “Authentication meltdown unstoppable”
+2024-12-16T21:54:03.000Z payment-service ERROR “Payments blocked indefinite”
+2024-12-16T21:54:04.000Z user-db DEBUG [pid=31669] “Idle=11, active=89 => minimal improvement”
+2024-12-16T21:54:05.000Z user-service CRITICAL “Still meltdown: 95% request fails”
+2024-12-16T21:54:06.000Z auth-service ERROR “Cannot verify user=402”
+2024-12-16T21:54:07.000Z payment-service WARN “Payment meltdown unstoppable”
+2024-12-16T21:54:08.000Z user-db ERROR [pid=31670] “HikariPool-1 timed out request”
+2024-12-16T21:54:09.000Z user-service ERROR “Operation forcibly ended userId=111”
+2024-12-16T21:54:10.000Z auth-service WARN “Auth meltdown still 90% fails”
+2024-12-16T21:54:11.000Z payment-service ERROR c.e.p.s.PaymentService - Execution canceled by meltdown
+2024-12-16T21:54:12.000Z user-db WARN [pid=31671] “Excessive backlog => meltdown”
+2024-12-16T21:54:13.000Z user-service CRITICAL [thread=http-nio-8080-exec-5] “User-service meltdown”
+2024-12-16T21:54:14.000Z auth-service ERROR “Failed token check user=847”
+2024-12-16T21:54:15.000Z payment-service WARN “Queue=50 meltdown”
+2024-12-16T21:54:16.000Z user-db DEBUG [pid=31672] “Idle=12, active=88 => partial fix attempt”
+2024-12-16T21:54:17.000Z user-service ERROR “Operation timed out userId=999”
+2024-12-16T21:54:18.000Z auth-service WARN “Auth meltdown not resolved”
+2024-12-16T21:54:19.000Z payment-service ERROR “Payment forcibly canceled”
+2024-12-16T21:54:20.000Z user-db ERROR [pid=31673] “FATAL: too many connections for role "user"”
+2024-12-16T21:54:21.000Z user-service CRITICAL “No DB improvement, meltdown stable”
+2024-12-16T21:54:22.000Z auth-service ERROR “No connections for user=999”
+2024-12-16T21:54:23.000Z payment-service WARN [PaymentWorker-1] “Payment meltdown indefinite”
+2024-12-16T21:54:24.000Z user-db ERROR [pid=31674] “HikariPool-1 request timed out again”
+2024-12-16T21:54:25.000Z user-service ERROR “Transaction forcibly ended userId=847”
+2024-12-16T21:54:26.000Z auth-service WARN “Auth meltdown, 95% fail”
+2024-12-16T21:54:27.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown continuing
+2024-12-16T21:54:28.000Z user-db ERROR [pid=31675] “Connection to localhost:5432 refused”
+2024-12-16T21:54:29.000Z user-db DEBUG [pid=31675] “Queue wait=2800ms”
+2024-12-16T21:54:30.000Z user-service CRITICAL [thread=http-nio-8080-exec-2] “Entire meltdown, no DB handles”
+2024-12-16T21:54:31.000Z auth-service ERROR “Cannot log in user=111”
+2024-12-16T21:54:32.000Z payment-service WARN “Payment meltdown, no connections”
+2024-12-16T21:54:33.000Z user-db ERROR [pid=31676] “HikariPool-1 remains exhausted”
+2024-12-16T21:54:34.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Profile update aborted userId=402”
+2024-12-16T21:54:35.000Z auth-service WARN “Login meltdown unstoppable”
+2024-12-16T21:54:36.000Z payment-service ERROR “Payment timed out again”
+2024-12-16T21:54:37.000Z user-db WARN “Queries starved 18s”
+2024-12-16T21:54:38.000Z user-service CRITICAL “No DB connections remain”
+2024-12-16T21:54:39.000Z auth-service ERROR “Token generation blocked meltdown”
+2024-12-16T21:54:40.000Z payment-service WARN “Backlog=55 meltdown”
+2024-12-16T21:54:41.000Z user-db DEBUG [pid=31677] “Idle=13, active=87 => partial improvement”
+2024-12-16T21:54:42.000Z user-service ERROR “Timeout retrieving user data userId=999”
+2024-12-16T21:54:43.000Z auth-service WARN “Still meltdown 95% error”
+2024-12-16T21:54:44.000Z payment-service ERROR “Payment step forcibly ended”
+2024-12-16T21:54:45.000Z user-db ERROR [pid=31678] “FATAL: too many connections”
+2024-12-16T21:54:46.000Z user-service CRITICAL “System meltdown persists”
+2024-12-16T21:54:47.000Z auth-service ERROR “Cannot load user info”
+2024-12-16T21:54:48.000Z payment-service WARN [PaymentWorker-2] “Queue=58 meltdown”
+2024-12-16T21:54:49.000Z user-db ERROR [pid=31679] “HikariPool-1 request timed out”
+2024-12-16T21:54:50.000Z user-service ERROR [thread=http-nio-8080-exec-1] “Operation forcibly timed out userId=847”
+2024-12-16T21:54:51.000Z auth-service WARN “Auth meltdown at 96% fails”
+2024-12-16T21:54:52.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:54:53.000Z user-db ERROR [pid=31680] “Connection to localhost:5432 refused”
+2024-12-16T21:54:54.000Z user-db DEBUG [pid=31680] “Queue wait=3000ms”
+2024-12-16T21:54:55.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:54:56.000Z auth-service ERROR “Still no connections user=999”
+2024-12-16T21:54:57.000Z payment-service WARN “Payment meltdown indefinite”
+2024-12-16T21:54:58.000Z user-db ERROR [pid=31681] “FATAL: too many connections for role "user"”
+2024-12-16T21:54:59.000Z user-service ERROR “Request forcibly ended userId=402”
+2024-12-16T21:55:00.000Z auth-service WARN “Authentication meltdown, 97% fails”
+2024-12-16T21:55:01.000Z payment-service ERROR “Payment step forcibly aborted meltdown”
+2024-12-16T21:55:02.000Z user-db DEBUG [pid=31682] “Idle=14, active=86 => partial fix attempt”
+2024-12-16T21:55:03.000Z user-service CRITICAL “No DB improvement”
+2024-12-16T21:55:04.000Z auth-service ERROR “Token check meltdown”
+2024-12-16T21:55:05.000Z payment-service WARN “Queue=60 meltdown unstoppable”
+2024-12-16T21:55:06.000Z user-db ERROR [pid=31683] “HikariPool-1 request timed out again”
+2024-12-16T21:55:07.000Z user-service ERROR [thread=http-nio-8080-exec-3] “Transaction forcibly ended”
+2024-12-16T21:55:08.000Z auth-service WARN “Cannot fetch user sessions meltdown”
+2024-12-16T21:55:09.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:55:10.000Z user-db WARN “Starvation persists => meltdown”
+2024-12-16T21:55:11.000Z user-service CRITICAL “User-service meltdown”
+2024-12-16T21:55:12.000Z auth-service ERROR “Failed to load user=111”
+2024-12-16T21:55:13.000Z payment-service WARN [PaymentWorker-1] “Backlog=63 meltdown”
+2024-12-16T21:55:14.000Z user-db DEBUG [pid=31684] “Idle=15, active=85 => slow recovery attempt”
+2024-12-16T21:55:15.000Z user-service ERROR “Operation timed out userId=999”
+2024-12-16T21:55:16.000Z auth-service WARN “Auth meltdown 98% fail”
+2024-12-16T21:55:17.000Z payment-service ERROR “Payment forcibly terminated”
+2024-12-16T21:55:18.000Z user-db ERROR [pid=31685] “FATAL: too many connections”
+2024-12-16T21:55:19.000Z user-service CRITICAL “DB meltdown no improvement”
+2024-12-16T21:55:20.000Z auth-service ERROR “Cannot verify credentials meltdown”
+2024-12-16T21:55:21.000Z payment-service WARN “Queue=66 meltdown”
+2024-12-16T21:55:22.000Z user-db ERROR [pid=31686] “Request timed out”
+2024-12-16T21:55:23.000Z user-service ERROR [thread=http-nio-8080-exec-7] “Profile update canceled userId=402”
+2024-12-16T21:55:24.000Z auth-service WARN “Auth meltdown unstoppable”
+2024-12-16T21:55:25.000Z payment-service ERROR “Operation forcibly ended meltdown”
+2024-12-16T21:55:26.000Z user-db ERROR [pid=31687] “Connection to localhost:5432 refused”
+2024-12-16T21:55:27.000Z user-db DEBUG [pid=31687] “Queue wait=3200ms”
+2024-12-16T21:55:28.000Z user-service CRITICAL “No relief from meltdown”
+2024-12-16T21:55:29.000Z auth-service ERROR “Token generation meltdown”
+2024-12-16T21:55:30.000Z payment-service WARN “Payment meltdown, indefinite stall”
+2024-12-16T21:55:31.000Z user-db ERROR [pid=31688] “FATAL: too many connections for role "user"”
+2024-12-16T21:55:32.000Z user-service DEBUG “Partial meltdown logs: userService locked”
+2024-12-16T21:55:33.000Z auth-service WARN “Cannot retrieve user=111”
+2024-12-16T21:55:34.000Z payment-service ERROR “Payment queue=70 meltdown”
+2024-12-16T21:55:35.000Z user-db ERROR [pid=31689] “HikariPool-1 is exhausted”
+2024-12-16T21:55:36.000Z user-service CRITICAL [thread=http-nio-8080-exec-1] “Max meltdown, DB still locked”
+2024-12-16T21:55:37.000Z auth-service ERROR “Still no connections meltdown”
+2024-12-16T21:55:38.000Z payment-service WARN “Could not finalize payment meltdown”
+2024-12-16T21:55:39.000Z user-db WARN “Starvation event => meltdown”
+2024-12-16T21:55:40.000Z user-service ERROR “Operation forcibly timed out userId=999”
+2024-12-16T21:55:41.000Z auth-service WARN “Auth meltdown: 98% fails”
+2024-12-16T21:55:42.000Z payment-service ERROR c.e.p.s.PaymentService - DB meltdown indefinite
+2024-12-16T21:55:43.000Z user-db DEBUG [pid=31690] “Idle=16, active=84 => slow progress”
+2024-12-16T21:55:44.000Z user-service CRITICAL “Still meltdown, errorCount=40”
+2024-12-16T21:55:45.000Z auth-service ERROR “Token check meltdown userId=402”
+2024-12-16T21:55:46.000Z payment-service WARN [PaymentWorker-2] “Queue=72 meltdown”
+2024-12-16T21:55:47.000Z user-db ERROR [pid=31691] “Request timed out again”
+2024-12-16T21:55:48.000Z user-service ERROR “Transaction forcibly ended userId=847”
+2024-12-16T21:55:49.000Z auth-service WARN “Authentication meltdown 99% fail”
+2024-12-16T21:55:50.000Z payment-service ERROR “No connections => meltdown”
+2024-12-16T21:55:51.000Z user-db ERROR [pid=31692] “FATAL: too many connections”
+2024-12-16T21:55:52.000Z user-db DEBUG [pid=31692] “Queue wait=3400ms”
+2024-12-16T21:55:53.000Z user-service CRITICAL [thread=http-nio-8080-exec-3] “User-service meltdown total”
+2024-12-16T21:55:54.000Z auth-service ERROR “Cannot proceed meltdown user=999”
+2024-12-16T21:55:55.000Z payment-service WARN “Payments stuck indefinite meltdown”
+2024-12-16T21:55:56.000Z user-db ERROR [pid=31693] “HikariPool-1 exhausted again”
+2024-12-16T21:55:57.000Z user-service ERROR [thread=http-nio-8080-exec-5] “Profile update forcibly aborted userId=111”
+2024-12-16T21:55:58.000Z auth-service WARN “Over 99% fail meltdown unstoppable”
+2024-12-16T21:55:59.000Z payment-service ERROR “Payment meltdown, queue=75”
+2024-12-16T21:56:00.000Z user-db WARN [pid=31694] “Still at meltdown state”
+2024-12-16T21:56:01.000Z user-service CRITICAL “User-service meltdown, no DB connections”
+2024-12-16T21:56:02.000Z auth-service ERROR “Token generation meltdown user=402”
+2024-12-16T21:56:03.000Z payment-service WARN “Payments suspended meltdown”
+2024-12-16T21:56:04.000Z user-db DEBUG [pid=31695] “Idle=17, active=83 => minimal improvement”
+2024-12-16T21:56:05.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Operation timed out userId=847”
+2024-12-16T21:56:06.000Z auth-service WARN “Auth meltdown continues”
+2024-12-16T21:56:07.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:56:08.000Z user-db ERROR [pid=31696] “HikariPool-1 request timed out”
+2024-12-16T21:56:09.000Z user-service CRITICAL “Database meltdown unending”
+2024-12-16T21:56:10.000Z auth-service ERROR “Cannot load user=111 meltdown”
+2024-12-16T21:56:11.000Z payment-service WARN “Queue=78 meltdown unstoppable”
+2024-12-16T21:56:12.000Z user-db WARN [pid=31697] “Starvation locked meltdown”
+2024-12-16T21:56:13.000Z user-service ERROR “Request forcibly ended userId=999”
+2024-12-16T21:56:14.000Z auth-service WARN “Auth meltdown 99% fail”
+2024-12-16T21:56:15.000Z payment-service ERROR “Operation could not be completed meltdown”
+2024-12-16T21:56:16.000Z user-db DEBUG [pid=31698] “Idle=18, active=82 => partial attempt”
+2024-12-16T21:56:17.000Z user-service CRITICAL “No DB fix in sight meltdown”
+2024-12-16T21:56:18.000Z auth-service ERROR “Failed token check meltdown”
+2024-12-16T21:56:19.000Z payment-service WARN “Payment meltdown indefinite”
+2024-12-16T21:56:20.000Z user-db ERROR [pid=31699] “FATAL: too many connections”
+2024-12-16T21:56:21.000Z user-service ERROR “Operation forcibly timed out userId=402”
+2024-12-16T21:56:22.000Z auth-service WARN “Authentication meltdown persists”
+2024-12-16T21:56:23.000Z payment-service ERROR [PaymentWorker-2] “Queue=80 meltdown”
+2024-12-16T21:56:24.000Z user-db ERROR [pid=31700] “Connection request timed out”
+2024-12-16T21:56:25.000Z user-service CRITICAL [thread=http-nio-8080-exec-2] “Max meltdown, DB locked fully”
+2024-12-16T21:56:26.000Z auth-service ERROR “Auth meltdown, user=999”
+2024-12-16T21:56:27.000Z payment-service WARN “Payments remain stuck meltdown”
+2024-12-16T21:56:28.000Z user-db ERROR [pid=31701] “FATAL: too many connections for role "user"”
+2024-12-16T21:56:29.000Z user-db DEBUG [pid=31701] “Queue wait=3500ms”
+2024-12-16T21:56:30.000Z user-service ERROR “Request forcibly ended userId=847”
+2024-12-16T21:56:31.000Z auth-service WARN “Auth meltdown unstoppable”
+2024-12-16T21:56:32.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:56:33.000Z user-db ERROR [pid=31702] “HikariPool-1 exhausted again”
+2024-12-16T21:56:34.000Z user-service CRITICAL [thread=http-nio-8080-exec-5] “User-service meltdown”
+2024-12-16T21:56:35.000Z auth-service ERROR “Cannot auth user=402 meltdown”
+2024-12-16T21:56:36.000Z payment-service WARN “Queue=85 meltdown”
+2024-12-16T21:56:37.000Z user-db WARN “Starvation => meltdown”
+2024-12-16T21:56:38.000Z user-service ERROR “Timeout retrieving user data userId=111”
+2024-12-16T21:56:39.000Z auth-service WARN “99% fail meltdown”
+2024-12-16T21:56:40.000Z payment-service ERROR “Operation canceled meltdown”
+2024-12-16T21:56:41.000Z user-db DEBUG [pid=31703] “Idle=19, active=81 => partial improvement”
+2024-12-16T21:56:42.000Z user-service CRITICAL [thread=http-nio-8080-exec-7] “Still meltdown, no DB”
+2024-12-16T21:56:43.000Z auth-service ERROR “Token generation meltdown unstoppable”
+2024-12-16T21:56:44.000Z payment-service WARN “Queue=88 meltdown”
+2024-12-16T21:56:45.000Z user-db ERROR [pid=31704] “FATAL: too many connections”
+2024-12-16T21:56:46.000Z user-service ERROR “User operation forcibly timed out”
+2024-12-16T21:56:47.000Z auth-service WARN “Auth meltdown user=999”
+2024-12-16T21:56:48.000Z payment-service ERROR “Payment meltdown indefinite”
+2024-12-16T21:56:49.000Z user-db ERROR [pid=31705] “HikariPool-1 request timed out”
+2024-12-16T21:56:50.000Z user-service CRITICAL [thread=http-nio-8080-exec-1] “System meltdown, errorCount=50”
+2024-12-16T21:56:51.000Z auth-service ERROR “No DB connections meltdown”
+2024-12-16T21:56:52.000Z payment-service WARN [PaymentWorker-1] “Queue=90 meltdown unstoppable”
+2024-12-16T21:56:53.000Z user-db ERROR [pid=31706] “Connection to localhost:5432 refused”
+2024-12-16T21:56:54.000Z user-db DEBUG [pid=31706] “Queue wait=3700ms”
+2024-12-16T21:56:55.000Z user-service CRITICAL “No remedy, meltdown stable”
+2024-12-16T21:56:56.000Z auth-service ERROR “Cannot load user=402 meltdown”
+2024-12-16T21:56:57.000Z payment-service WARN “Payments stuck meltdown indefinite”
+2024-12-16T21:56:58.000Z user-db ERROR [pid=31707] “FATAL: too many connections”
+2024-12-16T21:56:59.000Z user-service ERROR [thread=http-nio-8080-exec-2] “Transaction forcibly ended userId=111”
+2024-12-16T21:57:00.000Z auth-service WARN “Auth meltdown 99% fail”
+2024-12-16T21:57:01.000Z payment-service ERROR “Operation blocked meltdown”
+2024-12-16T21:57:02.000Z user-db DEBUG [pid=31708] “Idle=20, active=80 => incremental fix”
+2024-12-16T21:57:03.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:57:04.000Z auth-service ERROR “Token refresh meltdown”
+2024-12-16T21:57:05.000Z payment-service WARN “Queue=92 meltdown”
+2024-12-16T21:57:06.000Z user-db ERROR [pid=31709] “HikariPool-1 request timed out”
+2024-12-16T21:57:07.000Z user-service ERROR “Profile update canceled meltdown”
+2024-12-16T21:57:08.000Z auth-service WARN “Cannot authenticate user=999 meltdown”
+2024-12-16T21:57:09.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:57:10.000Z user-db WARN “Starvation => meltdown”
+2024-12-16T21:57:11.000Z user-service CRITICAL [thread=http-nio-8080-exec-5] “Max meltdown continues”
+2024-12-16T21:57:12.000Z auth-service ERROR “Token generation meltdown user=847”
+2024-12-16T21:57:13.000Z payment-service WARN [PaymentWorker-2] “Backlog=95 meltdown”
+2024-12-16T21:57:14.000Z user-db DEBUG [pid=31710] “Idle=21, active=79 => partial improvement”
+2024-12-16T21:57:15.000Z user-service ERROR [thread=http-nio-8080-exec-6] “Operation forcibly timed out userId=402”
+2024-12-16T21:57:16.000Z auth-service WARN “Auth meltdown unstoppable 99% fail”
+2024-12-16T21:57:17.000Z payment-service ERROR “Payment forcibly ended meltdown”
+2024-12-16T21:57:18.000Z user-db ERROR [pid=31711] “FATAL: too many connections for role "user"”
+2024-12-16T21:57:19.000Z user-service CRITICAL “No functional DB => meltdown”
+2024-12-16T21:57:20.000Z auth-service ERROR “Cannot authenticate user=402 meltdown”
+2024-12-16T21:57:21.000Z payment-service WARN “Queue=98 meltdown unstoppable”
+2024-12-16T21:57:22.000Z user-db ERROR [pid=31712] “HikariPool-1 request timed out”
+2024-12-16T21:57:23.000Z user-service ERROR “Transaction forcibly ended userId=847”
+2024-12-16T21:57:24.000Z auth-service WARN “No sign of improvement meltdown”
+2024-12-16T21:57:25.000Z payment-service ERROR c.e.p.s.PaymentService - Payment meltdown indefinite
+2024-12-16T21:57:26.000Z user-db ERROR [pid=31713] “Connection refused code=08001”
+2024-12-16T21:57:27.000Z user-db DEBUG [pid=31713] “Queue wait=3900ms”
+2024-12-16T21:57:28.000Z user-service CRITICAL [thread=http-nio-8080-exec-7] “DB meltdown not fixed”
+2024-12-16T21:57:29.000Z auth-service ERROR “Cannot load user=111 meltdown”
+2024-12-16T21:57:30.000Z payment-service WARN “Payment meltdown indefinite”
+2024-12-16T21:57:31.000Z user-db ERROR [pid=31714] “FATAL: too many connections”
+2024-12-16T21:57:32.000Z user-service ERROR “Request forcibly ended userId=999”
+2024-12-16T21:57:33.000Z auth-service WARN “Auth meltdown at 99% fails”
+2024-12-16T21:57:34.000Z payment-service ERROR “Queue=100 meltdown full”
+2024-12-16T21:57:35.000Z user-db ERROR [pid=31715] “HikariPool-1 remains exhausted”
+2024-12-16T21:57:36.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:57:37.000Z auth-service ERROR “Cannot read credentials meltdown”
+2024-12-16T21:57:38.000Z payment-service WARN [PaymentWorker-1] “Backoff meltdown”
+2024-12-16T21:57:39.000Z user-db WARN “Starvation => meltdown”
+2024-12-16T21:57:40.000Z user-service ERROR “Operation forcibly timed out userId=402”
+2024-12-16T21:57:41.000Z auth-service WARN “Authentication meltdown 99%+ fail”
+2024-12-16T21:57:42.000Z payment-service ERROR “Payment meltdown indefinite”
+2024-12-16T21:57:43.000Z user-db DEBUG [pid=31716] “Idle=22, active=78 => partial attempt”
+2024-12-16T21:57:44.000Z user-service CRITICAL “No sign of recovery meltdown”
+2024-12-16T21:57:45.000Z auth-service ERROR “Token generation meltdown unstoppable”
+2024-12-16T21:57:46.000Z payment-service WARN “Queue=102 meltdown”
+2024-12-16T21:57:47.000Z user-db ERROR [pid=31717] “FATAL: role "user" at max connections”
+2024-12-16T21:57:48.000Z user-service ERROR [thread=http-nio-8080-exec-1] “Could not update user=111 meltdown”
+2024-12-16T21:57:49.000Z auth-service WARN “Auth meltdown indefinite”
+2024-12-16T21:57:50.000Z payment-service ERROR “Forced termination meltdown”
+2024-12-16T21:57:51.000Z user-db ERROR [pid=31718] “HikariPool-1 request timed out again”
+2024-12-16T21:57:52.000Z user-service CRITICAL “DB meltdown no progress”
+2024-12-16T21:57:53.000Z auth-service ERROR “User=847 cannot log in meltdown”
+2024-12-16T21:57:54.000Z payment-service WARN “Queue=105 meltdown unstoppable”
+2024-12-16T21:57:55.000Z user-db DEBUG [pid=31719] “Idle=23, active=77 => minimal fix”
+2024-12-16T21:57:56.000Z user-service ERROR “Operation forcibly timed out”
+2024-12-16T21:57:57.000Z auth-service WARN “Auth meltdown 99% fail”
+2024-12-16T21:57:58.000Z payment-service ERROR c.e.p.s.PaymentService - meltdown indefinite
+2024-12-16T21:57:59.000Z user-db WARN “Still meltdown: queries starved”
+2024-12-16T21:58:00.000Z user-service CRITICAL [thread=http-nio-8080-exec-4] “No DB fix meltdown”
+2024-12-16T21:58:01.000Z auth-service ERROR “Connection pool not recovering meltdown”
+2024-12-16T21:58:02.000Z payment-service WARN “Payment meltdown, backlog=108”
+2024-12-16T21:58:03.000Z user-db ERROR [pid=31720] “FATAL: too many connections”
+2024-12-16T21:58:04.000Z user-db DEBUG [pid=31720] “Queue wait=4100ms”
+2024-12-16T21:58:05.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:58:06.000Z auth-service ERROR “Token generation meltdown user=999”
+2024-12-16T21:58:07.000Z payment-service WARN [PaymentWorker-2] “No DB fix meltdown”
+2024-12-16T21:58:08.000Z user-db ERROR [pid=31721] “HikariPool-1 idle=0 meltdown”
+2024-12-16T21:58:09.000Z user-service ERROR [thread=http-nio-8080-exec-2] “Timeout retrieving user cart”
+2024-12-16T21:58:10.000Z auth-service WARN “Auth meltdown 99% fail”
+2024-12-16T21:58:11.000Z payment-service ERROR “Refund forcibly ended meltdown”
+2024-12-16T21:58:12.000Z user-db WARN “Queries starved meltdown”
+2024-12-16T21:58:13.000Z user-service CRITICAL “DB meltdown final stage”
+2024-12-16T21:58:14.000Z auth-service ERROR “Cannot authenticate meltdown”
+2024-12-16T21:58:15.000Z payment-service WARN “Queue=110 meltdown unstoppable”
+2024-12-16T21:58:16.000Z user-db DEBUG [pid=31722] “Idle=24, active=76 => partial attempt”
+2024-12-16T21:58:17.000Z user-service ERROR “Operation forcibly timed out userId=402”
+2024-12-16T21:58:18.000Z auth-service WARN “Auth meltdown indefinite”
+2024-12-16T21:58:19.000Z payment-service ERROR “Could not process payment meltdown”
+2024-12-16T21:58:20.000Z user-db ERROR [pid=31723] “FATAL: too many connections for role "user"”
+2024-12-16T21:58:21.000Z user-service CRITICAL [thread=http-nio-8080-exec-6] “No DB connections, meltdown”
+2024-12-16T21:58:22.000Z auth-service ERROR “Cannot read user sessions meltdown”
+2024-12-16T21:58:23.000Z payment-service WARN “Queue=115 meltdown unstoppable”
+2024-12-16T21:58:24.000Z user-db ERROR [pid=31724] “HikariPool-1 request timed out”
+2024-12-16T21:58:25.000Z user-service ERROR “Transaction forcibly ended userId=999”
+2024-12-16T21:58:26.000Z auth-service WARN [thread=http-nio-8080-exec-3] “Authentication meltdown 99%+ fail”
+2024-12-16T21:58:27.000Z payment-service ERROR “Payment meltdown indefinite”
+2024-12-16T21:58:28.000Z user-db ERROR [pid=31725] “Connection to localhost:5432 refused” code=08001
+2024-12-16T21:58:29.000Z user-db DEBUG [pid=31725] “Queue wait=4300ms”
+2024-12-16T21:58:30.000Z user-service CRITICAL “System meltdown unstoppable”
+2024-12-16T21:58:31.000Z auth-service ERROR “No DB handle meltdown user=847”
+2024-12-16T21:58:32.000Z payment-service WARN “Payment meltdown, queue=118”
+2024-12-16T21:58:33.000Z user-db ERROR [pid=31726] “FATAL: too many connections”
+2024-12-16T21:58:34.000Z user-service ERROR “Request forcibly ended userId=111”
+2024-12-16T21:58:35.000Z auth-service WARN “Auth meltdown 99% fail”
+2024-12-16T21:58:36.000Z payment-service ERROR c.e.p.s.PaymentService - meltdown indefinite
+2024-12-16T21:58:37.000Z user-db WARN “Still meltdown: partial attempts failing”
+2024-12-16T21:58:38.000Z user-service CRITICAL [thread=http-nio-8080-exec-7] “No improvement, meltdown stable”
+2024-12-16T21:58:39.000Z auth-service ERROR “Token generation meltdown unstoppable”
+2024-12-16T21:58:40.000Z payment-service WARN “Queue=120 meltdown”
+2024-12-16T21:58:41.000Z user-db DEBUG [pid=31727] “Idle=25, active=75 => slight improvement”
+2024-12-16T21:58:42.000Z user-service ERROR “Operation forcibly timed out userId=402”
+2024-12-16T21:58:43.000Z auth-service WARN “Auth meltdown indefinite”
+2024-12-16T21:58:44.000Z payment-service ERROR “Payment forcibly canceled meltdown”
+2024-12-16T21:58:45.000Z user-db ERROR [pid=31728] “HikariPool-1 request timed out”
+2024-12-16T21:58:46.000Z user-service CRITICAL “Still meltdown, user-service non-functional”
+2024-12-16T21:58:47.000Z auth-service ERROR “Cannot load user=999 meltdown”
+2024-12-16T21:58:48.000Z payment-service WARN “Payments=123 meltdown unstoppable”
+2024-12-16T21:58:49.000Z user-db ERROR [pid=31729] “FATAL: too many connections”
+2024-12-16T21:58:50.000Z user-service ERROR “Transaction forcibly ended userId=847”
+2024-12-16T21:58:51.000Z auth-service WARN “Auth meltdown 99.5% fail”
+2024-12-16T21:58:52.000Z payment-service ERROR c.e.p.s.PaymentService - meltdown indefinite
+2024-12-16T21:58:53.000Z user-db ERROR [pid=31730] “Connection to localhost:5432 refused”
+2024-12-16T21:58:54.000Z user-db DEBUG [pid=31730] “Queue wait=4500ms”
+2024-12-16T21:58:55.000Z user-service CRITICAL “No DB connectivity meltdown”
+2024-12-16T21:58:56.000Z auth-service ERROR “Could not refresh token user=402 meltdown”
+2024-12-16T21:58:57.000Z payment-service WARN “Queue=125 meltdown”
+2024-12-16T21:58:58.000Z user-db ERROR [pid=31731] “FATAL: too many connections for role "user"”
+2024-12-16T21:58:59.000Z user-service ERROR “Operation forcibly timed out userId=111”
+2024-12-16T21:59:00.000Z auth-service WARN [thread=http-nio-8080-exec-1] “Authentication meltdown”
+2024-12-16T21:59:01.000Z payment-service ERROR “No progress meltdown indefinite”
+2024-12-16T21:59:02.000Z user-db DEBUG [pid=31732] “Idle=26, active=74 => partial fix attempt”
+2024-12-16T21:59:03.000Z user-service CRITICAL “User-service meltdown unstoppable”
+2024-12-16T21:59:04.000Z auth-service ERROR “Token generation meltdown user=999”
+2024-12-16T21:59:05.000Z payment-service WARN [PaymentWorker-2] “Queue=128 meltdown”
+2024-12-16T21:59:06.000Z user-db ERROR [pid=31733] “HikariPool-1 request timed out again”
+2024-12-16T21:59:07.000Z user-service ERROR [thread=http-nio-8080-exec-2] “Request forcibly ended userId=402”
+2024-12-16T21:59:08.000Z auth-service WARN “Auth meltdown 99.6% fail”
+2024-12-16T21:59:09.000Z payment-service ERROR c.e.p.s.PaymentService - meltdown indefinite
+2024-12-16T21:59:10.000Z user-db WARN “Starvation => meltdown”
+2024-12-16T21:59:11.000Z user-service CRITICAL [thread=http-nio-8080-exec-3] “No DB improvement meltdown”
+2024-12-16T21:59:12.000Z auth-service ERROR “Cannot authenticate user=111 meltdown”
+2024-12-16T21:59:13.000Z payment-service WARN “Queue=130 meltdown unstoppable”
+2024-12-16T21:59:14.000Z user-db DEBUG [pid=31734] “Idle=27, active=73 => partial attempt”
+2024-12-16T21:59:15.000Z user-service ERROR “Operation forcibly ended userId=847”
+2024-12-16T21:59:16.000Z auth-service WARN “Auth meltdown near 100% fail”
+2024-12-16T21:59:17.000Z payment-service ERROR “Payment forcibly canceled meltdown”
+2024-12-16T21:59:18.000Z user-db ERROR [pid=31735] “FATAL: too many connections”
+2024-12-16T21:59:19.000Z user-service CRITICAL “No progress meltdown”
+2024-12-16T21:59:20.000Z auth-service ERROR “Token check meltdown user=402”
+2024-12-16T21:59:21.000Z payment-service WARN “Queue=132 meltdown”
+2024-12-16T21:59:22.000Z user-db ERROR [pid=31736] “Connection request timed out”
+2024-12-16T21:59:23.000Z user-service ERROR “User operation forcibly ended userId=999”
+2024-12-16T21:59:24.000Z auth-service WARN “99.8% meltdown fail”
+2024-12-16T21:59:25.000Z payment-service ERROR “All payments blocked meltdown”
+2024-12-16T21:59:26.000Z user-db ERROR [pid=31737] “HikariPool-1 exhausted”
+2024-12-16T21:59:27.000Z user-db DEBUG [pid=31737] “Queue wait=4700ms”
+2024-12-16T21:59:28.000Z user-service CRITICAL [thread=http-nio-8080-exec-6] “Approaching final meltdown”
+2024-12-16T21:59:29.000Z auth-service ERROR “Cannot retrieve user=847 meltdown”
+2024-12-16T21:59:30.000Z payment-service WARN [PaymentWorker-1] “Payment meltdown indefinite”
+2024-12-16T21:59:31.000Z user-db ERROR [pid=31738] “FATAL: too many connections”
+2024-12-16T21:59:32.000Z user-service ERROR [thread=http-nio-8080-exec-7] “Transaction forcibly ended meltdown”
+2024-12-16T21:59:33.000Z auth-service WARN “Auth meltdown basically total”
+2024-12-16T21:59:34.000Z payment-service ERROR “Queue=135 meltdown unstoppable”
+2024-12-16T21:59:35.000Z user-db WARN “Long query times => meltdown persists”
+2024-12-16T21:59:36.000Z user-service CRITICAL “User-service meltdown final stage”
+2024-12-16T21:59:37.000Z auth-service ERROR “Cannot authenticate meltdown user=999”
+2024-12-16T21:59:38.000Z payment-service WARN “Payment meltdown, no connections”
+2024-12-16T21:59:39.000Z user-db DEBUG [pid=31739] “Idle=28, active=72 => partial fix attempt”
+2024-12-16T21:59:40.000Z user-service ERROR “Operation forcibly ended userId=111”
+2024-12-16T21:59:41.000Z auth-service WARN “Auth meltdown 99.9% fail”
+2024-12-16T21:59:42.000Z payment-service ERROR “Payment forcibly timed out meltdown”
+2024-12-16T21:59:43.000Z user-db ERROR [pid=31740] “FATAL: too many connections for role "user"”
+2024-12-16T21:59:44.000Z user-service CRITICAL “Service meltdown unstoppable”
+2024-12-16T21:59:45.000Z auth-service ERROR “Cannot proceed meltdown”
+2024-12-16T21:59:46.000Z payment-service WARN “Queue=140 meltdown”
+2024-12-16T21:59:47.000Z user-db ERROR [pid=31741] “HikariPool-1 request timed out”
+2024-12-16T21:59:48.000Z user-service ERROR “Transaction forcibly ended userId=847”
+2024-12-16T21:59:49.000Z auth-service WARN “Auth meltdown ~100% fail”
+2024-12-16T21:59:50.000Z payment-service ERROR c.e.p.s.PaymentService - meltdown indefinite
+2024-12-16T21:59:51.000Z user-db WARN “Queries still starved meltdown”
+2024-12-16T21:59:52.000Z user-service CRITICAL “Unrecoverable meltdown”
+2024-12-16T21:59:53.000Z auth-service ERROR “No connections meltdown user=402”
+2024-12-16T21:59:54.000Z payment-service WARN [PaymentWorker-2] “Shutting down threads”
+2024-12-16T21:59:55.000Z user-db INFO [pid=31742] “Attempting minimal recovery: idle=2, active=98”
+2024-12-16T21:59:55.500Z user-service INFO “Shutdown triggered: meltdown”
+2024-12-16T21:59:56.000Z auth-service INFO { “time”:“2024-12-16T21:59:56.000Z”, “message”:“Graceful stop initiated” }
+2024-12-16T21:59:57.000Z payment-service WARN “Terminating PaymentWorker due to meltdown”
+2024-12-16T21:59:58.000Z user-db ERROR [pid=31743] “HikariPool-1 requests still timing out”
+2024-12-16T21:59:59.000Z user-service CRITICAL “All requests blocked, meltdown final”
+2024-12-16T22:00:00.000Z auth-service WARN “Meltdown persists, service stopping”
